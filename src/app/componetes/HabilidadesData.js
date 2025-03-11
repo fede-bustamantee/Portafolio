@@ -1,29 +1,19 @@
-"use client";
-import React, { useState, useEffect } from "react";
+'use client';
+import React, { useState, useEffect } from 'react';
 
 const HabilidadesDataPage = () => {
   const [habilidades, setHabilidades] = useState([]);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchHabilidades = async () => {
-      try {
-        const response = await fetch("/api/habilidades");
-        if (!response.ok) throw new Error(`Error ${response.status}: No se pudieron obtener las habilidades.`);
-        
-        const data = await response.json();
-        setHabilidades(Array.isArray(data) ? data : []);
-      } catch (err) {
-        setError(err.message);
-        console.error("Error al obtener las habilidades:", err);
-      }
-    };
-
-    fetchHabilidades();
+    fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/habilidades') 
+      .then(response => response.json())
+      .then(data => setHabilidades(data))
+      .catch(error => console.error('Error al obtener las habilidades:', error));
   }, []);
 
-  if (error) return <div>Error: {error}</div>;
-  if (habilidades.length === 0) return <div>Cargando habilidades...</div>;
+  if (habilidades.length === 0) {
+    return <div>Cargando habilidades...</div>;
+  }
 
   return (
     <div>
