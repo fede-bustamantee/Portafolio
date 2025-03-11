@@ -1,22 +1,29 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client";
+import React, { useState, useEffect } from "react";
 
 const HabilidadesDataPage = () => {
   const [habilidades, setHabilidades] = useState([]);
+  const [error, setError] = useState(null);
 
-  // Realizamos la solicitud GET a la API de Next.js para obtener las habilidades
   useEffect(() => {
-    fetch('/api/habilidades')  // Solicita a la API de Next.js que a su vez hace la solicitud al backend
-      .then(response => response.json())
-      .then(data => {
-        setHabilidades(data);  // Asumimos que obtenemos un array de habilidades
-      })
-      .catch(error => console.error('Error al obtener las habilidades:', error));
+    const fetchHabilidades = async () => {
+      try {
+        const response = await fetch("/api/habilidades");
+        if (!response.ok) throw new Error(`Error ${response.status}: No se pudieron obtener las habilidades.`);
+        
+        const data = await response.json();
+        setHabilidades(Array.isArray(data) ? data : []);
+      } catch (err) {
+        setError(err.message);
+        console.error("Error al obtener las habilidades:", err);
+      }
+    };
+
+    fetchHabilidades();
   }, []);
 
-  if (habilidades.length === 0) {
-    return <div>Cargando habilidades...</div>;
-  }
+  if (error) return <div>Error: {error}</div>;
+  if (habilidades.length === 0) return <div>Cargando habilidades...</div>;
 
   return (
     <div>

@@ -1,34 +1,41 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client";
+import React, { useState, useEffect } from "react";
 
 const PersonalDataPage = () => {
-const [personalData, setPersonalData] = useState(null);
+  const [personalData, setPersonalData] = useState(null);
+  const [error, setError] = useState(null);
 
-  // Realizamos la solicitud GET a la API de Next.js
-useEffect(() => {
-    fetch('/api/personalData')  // Solicitamos a la API de Next.js que a su vez hace la solicitud a Express
-    .then(response => response.json())
-    .then(data => {
-        setPersonalData(data[0]);  // Asumimos que obtenemos un array, y tomamos el primer elemento
-    })
-    .catch(error => console.error('Error al obtener los datos personales:', error));
-}, []);
+  useEffect(() => {
+    const fetchPersonalData = async () => {
+      try {
+        const response = await fetch("/api/personalData");
+        if (!response.ok) throw new Error(`Error ${response.status}: No se pudo obtener la información personal.`);
+        
+        const data = await response.json();
+        setPersonalData(data && data.length > 0 ? data[0] : null);
+      } catch (err) {
+        setError(err.message);
+        console.error("Error al obtener los datos personales:", err);
+      }
+    };
 
-if (!personalData) {
-    return <div>Cargando...</div>;
-}
+    fetchPersonalData();
+  }, []);
 
-return (
+  if (error) return <div>Error: {error}</div>;
+  if (!personalData) return <div>Cargando datos personales...</div>;
+
+  return (
     <div>
-    <p><strong>Nombre y Apellido:</strong> {personalData.nombreApellido}</p>
-    <p><strong>Edad:</strong> {personalData.edad}</p>
-    <p><strong>Dirección:</strong> {personalData.direccion}</p>
-    <p><strong>Teléfono:</strong> {personalData.telefono}</p>
-    <p><strong>Email:</strong> {personalData.email}</p>
-    <p><strong>Descripción:</strong> {personalData.myDescription}</p>
-    <img src={personalData.urlimagen} alt="Imagen personal" />
+      <p><strong>Nombre y Apellido:</strong> {personalData.nombreApellido}</p>
+      <p><strong>Edad:</strong> {personalData.edad}</p>
+      <p><strong>Dirección:</strong> {personalData.direccion}</p>
+      <p><strong>Teléfono:</strong> {personalData.telefono}</p>
+      <p><strong>Email:</strong> {personalData.email}</p>
+      <p><strong>Descripción:</strong> {personalData.myDescription}</p>
+      <img src={personalData.urlimagen} alt="Imagen personal" style={{ width: 100, height: 100, borderRadius: "50%" }} />
     </div>
-);
+  );
 };
 
 export default PersonalDataPage;
