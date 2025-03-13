@@ -1,34 +1,111 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import habilidades from "../data/habilidades"; // Importando los datos
+import "../styles/Habilidades.css";
 
-const HabilidadesDataPage = () => {
-  const [habilidades, setHabilidades] = useState([]);
+const Habilidades = () => {
+  const itemsPerPage = 3; // Número de habilidades por página
+  const [currentPage, setCurrentPage] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-  useEffect(() => {
-    fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/habilidades') 
-      .then(response => response.json())
-      .then(data => setHabilidades(data))
-      .catch(error => console.error('Error al obtener las habilidades:', error));
-  }, []);
+  // Usamos los datos importados desde habilidades.js
+  const habilidadesData = habilidades;
 
-  if (habilidades.length === 0) {
-    return <div>Cargando habilidades...</div>;
-  }
+  const totalPages = Math.ceil(habilidadesData.length / itemsPerPage);
+  const startIndex = currentPage * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentItems = habilidadesData.slice(startIndex, endIndex);
+
+  // Verificar si es la primera o última página
+  const isFirstPage = currentPage === 0;
+  const isLastPage = currentPage === totalPages - 1;
+
+  const siguienteImagen = () => {
+    if (isLastPage) return;
+    setDirection(1);
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const anteriorImagen = () => {
+    if (isFirstPage) return;
+    setDirection(-1);
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
 
   return (
-    <div>
-      <h1>Habilidades</h1>
-      <ul>
-        {habilidades.map((habilidad, index) => (
-          <li key={index}>
-            <img src={habilidad.icon} alt={habilidad.nombre} style={{ width: 50, height: 50 }} />
-            <h3>{habilidad.nombre}</h3>
-            <p>{habilidad.description}</p>
-          </li>
+    <div id="habi" className="service">
+      <div className="titulo" data-aos="fade-up">
+        <h2>
+          <small>02.</small> Habilidades
+        </h2>
+      </div>
+
+      <div className="slider-container">
+        <AnimatePresence initial={false} custom={direction} mode="wait">
+          <motion.div
+            key={currentPage}
+            className="contenedor-habilidades"
+            custom={direction}
+            initial={{ opacity: 0, x: direction === 1 ? 1000 : -1000 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: direction === 1 ? 1000 : -1000 }}
+            transition={{ duration: 0.3 }}
+          >
+            {currentItems.map((habilidad, index) => (
+              <div key={index} className="box">
+                <div className="card">
+                  <i className={habilidad.icon}></i>
+                  <h5>{habilidad.nombre}</h5>
+                  <div className="parrafo">
+                    <p>{habilidad.description}</p>
+                    {index === 0 && currentPage === 0 && <a className="button" href="#mi">Volver</a>}
+                    {index === itemsPerPage - 1 && currentPage === totalPages - 1 && <a className="button" href="#ser">Continuar</a>}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Solo mostrar flecha izquierda si no es la primera página */}
+        {!isFirstPage && (
+          <button
+            onClick={anteriorImagen}
+            className="arrow-button left-arrow"
+            aria-label="Anterior"
+          >
+            <i className="fas fa-chevron-left" aria-hidden="true"></i>
+          </button>
+        )}
+        
+        {/* Solo mostrar flecha derecha si no es la última página */}
+        {!isLastPage && (
+          <button
+            onClick={siguienteImagen}
+            className="arrow-button right-arrow"
+            aria-label="Siguiente"
+          >
+            <i className="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        )}
+      </div>
+
+      {/* Indicadores de página */}
+      <div className="page-indicators">
+        {Array.from({ length: totalPages }).map((_, index) => (
+          <span
+            key={index}
+            className={`page-dot ${currentPage === index ? "active" : ""}`}
+            onClick={() => {
+              setDirection(index > currentPage ? 1 : -1);
+              setCurrentPage(index);
+            }}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
 
-export default HabilidadesDataPage;
+export default Habilidades;

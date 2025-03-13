@@ -1,31 +1,37 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client";
+import React from "react";
+import Image from "next/image";
+import personalData from "../data/personaldata";
+import "../styles/PersonalData.css";
 
-const PersonalDataPage = () => {
-  const [personalData, setPersonalData] = useState(null);
-
-  useEffect(() => {
-    fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/personalData')
-      .then(response => response.json())
-      .then(data => setPersonalData(data[0]))  
-      .catch(error => console.error('Error al obtener los datos personales:', error));
-  }, []);
-
-  if (!personalData) {
-    return <div>Cargando...</div>;
-  }
-
+const PersonalData = () => {
   return (
-    <div>
-      <p><strong>Nombre y Apellido:</strong> {personalData.nombreApellido}</p>
-      <p><strong>Edad:</strong> {personalData.edad}</p>
-      <p><strong>Dirección:</strong> {personalData.direccion}</p>
-      <p><strong>Teléfono:</strong> {personalData.telefono}</p>
-      <p><strong>Email:</strong> {personalData.email}</p>
-      <p><strong>Descripción:</strong> {personalData.myDescription}</p>
-      <img src={personalData.urlimagen} alt="Imagen personal" />
-    </div>
+    <section id="mi" className="about">
+      <div className="main" data-aos="fade-up" data-aos-duration="100">
+        
+      <Image
+        src={personalData.urlimagen} // Usa la URL de la imagen desde el objeto
+        alt={`Foto de ${personalData.nombreApellido}`}
+        width={300}
+        height={300}
+        className="profile-image"
+      />
+
+        {/* Información personal */}
+        <div className="about-text" data-aos="fade-up">
+          <h2>
+            <small>01.</small> Acerca de mí
+          </h2>
+          <p>{personalData.myFullDescription}</p>
+
+          {/* Botón Leer Más */}
+          <a href="#habi">
+            <button type="button">Leer más...</button>
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default PersonalDataPage;
+export default PersonalData;
