@@ -18,41 +18,37 @@ const Home = () => {
   return (
     <div>
       <div className="textizquierda" data-aos-delay="100" data-aos="zoom-in">
+      <div className="lineavertical"></div>
         <a href={contacto.github}><i className="fab fa-github"></i></a>
-        <a href=""><i className="fab fa-whatsapp"></i></a>
-        <a href=""><i className="fab fa-instagram"></i></a>
-        <a href=""><i className="fab fa-facebook"></i></a>
-        <a href=""><i className="fab fa-twitter"></i></a>
+        <a href={contacto.whatsapp}><i className="fab fa-whatsapp"></i></a>
+        <a href={contacto.gmail}><i className="fa-regular fa-envelope"></i></a>
       </div>
 
       <div className="textderecha" data-aos-delay="100" data-aos="zoom-in">
-        <p>fedemacano</p>
+      <div className="linea-vertical"></div>
+        <p>fede</p>
       </div>
 
       <div className="secc" id="pagi">
         <nav>
-          <a href="index.html">
+          <a href="/">
             <h2 className="logo">
-              <span data-aos="zoom-in" data-aos-duration="1000">ma</span>
-              <samp data-aos="zoom-in" data-aos-duration="1000">cano</samp>
+              <span data-aos="zoom-in" data-aos-duration="1000">f</span>
+              <samp data-aos="zoom-in" data-aos-duration="1000">b</samp>
             </h2>
           </a>
 
           <ul>
             <li data-aos-delay="200" data-aos="zoom-in"><a href="#mi">01. Acerca de mi</a></li>
             <li data-aos-delay="300" data-aos="zoom-in"><a href="#habi">02. Habilidades</a></li>
-            <li data-aos-delay="400" data-aos="zoom-in"><a href="#ser">03. Servicios</a></li>
+            <li data-aos-delay="400" data-aos="zoom-in"><a href="#apps">03. Aplicaciones</a></li>
             <li data-aos-delay="500" data-aos="zoom-in"><a href="#con">04. Contactame</a></li>
           </ul>
-
-          <a href="iniciarseccion.html">
-            <p className="subs" data-aos="zoom-in" data-aos-delay="600">Inscribirse</p>
-          </a>
 
           <div className="contenido">
             <h4 data-aos="zoom-in" data-aos-delay="700">Bienvenidos a mi sitio web, me llamo</h4>
             <h1 data-aos="zoom-in" data-aos-delay="800">{personalData.nombreApellido},</h1>
-            <h3 data-aos="zoom-in" data-aos-delay="900">{personalData.myDescription},</h3>
+            <h3 data-aos="zoom-in" data-aos-delay="900">{personalData.myDescription}</h3>
             <br />
 
             <div data-aos="flip-down" data-aos-delay="1000" data-aos-duration="500">

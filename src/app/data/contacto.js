@@ -1,9 +1,7 @@
 const contacto = {
-    github: "https://github.com/",
-    whatsapp: "https://github.com/", // Asegúrate de usar un número correcto
-    instagram: "https://github.com/",
-    facebook: "https://github.com/",
-    twitter: "https://github.com/"
+    github: "https://github.com/fede-bustamantee?tab=repositories",
+    whatsapp: "https://wa.me/3498409675",
+    gmail:"https://mailto:federicobustamantevyp@gmail.com"
   };
   
   export default contacto;  

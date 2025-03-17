@@ -1,17 +1,21 @@
 /* Estilos Base */
 .service{
-    background-color: black;
+    background-color: #0f172a;
     width: 100%;
     height: 100vh;
     padding: 1px 0px;
 }
 
 .titulo h2{
-    color: white;
+    color: #5eead4;
     font-size: 40px;
     width: 1130px;
     margin: 30px auto;
     text-align: center;
+}
+
+.titulo h2 small{
+    color: #e2e8f0;
 }
 
 .contenedor-habilidades {
@@ -44,37 +48,41 @@
     display: block;
     text-align: center;
     margin: 25px 0px;
-    color: #f9004d;
+    color: #5e9bea;
 }
 
 h5{
-    color: white;
+    color: #5eead4;
     font-size: 23px;
     margin-bottom: 15px;
     text-align: center;
 }
 
 .parrafo p{
-    color: rgb(209, 98, 209);
+    color: #e2e8f0;
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 25px;
 }
 
-.card .button{
-    background-color: #f9004d;
-    color: white;
+.card .button {
+    background-color: #e2e8f0;
+    color: black;
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
-    transition: .4s;
+    transition: 0.4s;
+    position: relative;
+    top: 70px; /* Mueve el botón hacia abajo 20px */
 }
+
 
 .card .button:hover{
     background-color: transparent;
-    border: 2px solid #f9004d;
+    border: 2px solid #e2e8f0;
+    color: #e2e8f0;
     cursor: pointer;
 }
 
@@ -90,25 +98,27 @@ h5{
 .arrow-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: #f9004d;
-    color: white;
+    background: #e2e8f0;
+    color: black;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    border: 2px solid #e2e8f0;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     z-index: 10;
-    font-size: 18px;
+    font-size: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, transform 0.2s;
 }
 
 .arrow-button:hover {
-    background-color: #d00043;
+    background-color: #e2e8f0;
+    color: black;
+    cursor: pointer;
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -117,11 +127,11 @@ h5{
 }
 
 .left-arrow {
-    left: 20px;
+    left: 50px;
 }
 
 .right-arrow {
-    right: 20px;
+    right: 50px;
 }
 
 /* Indicadores de página */
@@ -142,7 +152,7 @@ h5{
 }
 
 .page-dot.active {
-    background-color: #f9004d;
+    background-color: #5eead4;
     transform: scale(1.2);
 }
 
@@ -187,5 +197,45 @@ h5{
     .arrow-button {
         width: 30px;
         height: 30px;
+    }
+}
+
+/* Contenedor del botón Continuar */
+.continuar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -25px;
+    margin-left: 780px;
+}
+
+
+/* Botón Continuar final */
+.continuar-container .button {
+    background-color: #5eead4;
+    color: #0f172a;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 25px;
+    border-radius: 30px;
+    transition: 0.4s;
+    box-shadow: 0 4px 10px rgba(94, 234, 212, 0.5);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Efecto hover */
+.continuar-container .button:hover {
+    background-color: transparent;
+    color: #5eead4;
+    border: 2px solid #5eead4;
+    box-shadow: 0 4px 10px rgba(94, 234, 212, 0.8);
+    cursor: pointer;
+}
+
+/* Responsive para botón */
+@media screen and (max-width: 768px) {
+    .continuar-container .button {
+        padding: 10px 25px;
+        font-size: 14px;
     }
 }

@@ -2,25 +2,26 @@
     height: 100vh;
     width: auto;
     padding: 80px 0px;
-    background-color: black;
+    background-color: #1e293b;
 }
-.about img:hover{
-    border-width: 7px;
-    border-style: solid;
-    border-color: #000000;
-
-}
-.about img{
+.about img {
     height: auto;
     width: 300px;
-    filter: opacity(0.4) drop-shadow(0 0 0 rgb(189, 13, 180))
+    filter: opacity(0.7) drop-shadow(0 0 0 rgb(31, 38, 99));
+    transition: transform 0.4s ease, filter 0.4s ease; /* Transición suave */
+    border-radius: 15px; /* Bordes redondeados para un look más moderno */
 }
-.about img:hover{
-    filter: opacity(10) drop-shadow(0 0 0 rgb(238, 14, 137))
+/* Efecto al pasar el mouse */
+.about img:hover {
+    filter: opacity(1) drop-shadow(0 0 4px #5eead4); /* Sombra más sutil */
+    transform: scale(1.1);
+    box-shadow: 0 1px 1px rgba(94, 234, 212, 0.5); /* Sombra pequeña y con transparencia */
 }
 
-.about img:hover{
-    transform: scale(1.1);
+/* Efecto extra: animación de "rebote" al terminar */
+.about img:active {
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
 }
 .about-text{
     width: 550px;
@@ -34,13 +35,13 @@
     justify-content: space-around;
 }
 .about-text h2{
-    color:white;
+    color:#5eead4;
     font-size: 40px;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
 h2 small{
-    color:#f9004d;
+    color:#e2e8f0;
     letter-spacing: 2px;
     font-size: 22px;
     margin-bottom: 25px;
@@ -48,16 +49,34 @@ h2 small{
 
 }
 
-.about-text p{
-    color:rgb(209, 98, 209);
+.about-text p {
+    color: #e2e8f0;
     letter-spacing: 1px;
-    line-height: 28px;
+    line-height: 28px; /* Espaciado entre líneas */
     font-size: 18px;
     margin-bottom: 45px;
+
+    /* Control de altura y scroll */
+    max-height: 280px; /* Ajustá la altura máxima según te guste */
+    overflow-y: auto; /* Agrega la barra de desplazamiento vertical */
+    padding-right: 10px; /* Espaciado para que no quede pegado al borde */
+    scrollbar-width: thin; /* Barra de desplazamiento más delgada (para Firefox) */
+    scrollbar-color: #5eead4 transparent; /* Personaliza la barra */
 }
+
+/* Estilizar la barra de scroll en navegadores Webkit (Chrome/Edge) */
+.about-text p::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra */
+}
+
+.about-text p::-webkit-scrollbar-thumb {
+    background-color: rgb(209, 98, 209); /* Color de la barra */
+    border-radius: 10px;
+}
+
 button{
-    background-color: #f9004d;
-    color:white ;
+    background-color: #e2e8f0;
+    color:black;
     text-decoration: none;
     border: 2px solid transparent;
     font-weight:bold ;
@@ -67,7 +86,8 @@ button{
 }
 button:hover{
     background-color: transparent;
-    border: 2px solid #f9004d;
+    border: 2px solid #e2e8f0;
+    color:#e2e8f0;
     cursor: pointer;
 
 }

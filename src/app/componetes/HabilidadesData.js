@@ -55,12 +55,10 @@ const Habilidades = () => {
             {currentItems.map((habilidad, index) => (
               <div key={index} className="box">
                 <div className="card">
-                  <i className={habilidad.icon}></i>
+                  <i className={habilidad.icon} style={{ color: habilidad.color }}></i>
                   <h5>{habilidad.nombre}</h5>
                   <div className="parrafo">
                     <p>{habilidad.description}</p>
-                    {index === 0 && currentPage === 0 && <a className="button" href="#mi">Volver</a>}
-                    {index === itemsPerPage - 1 && currentPage === totalPages - 1 && <a className="button" href="#ser">Continuar</a>}
                   </div>
                 </div>
               </div>
@@ -78,7 +76,7 @@ const Habilidades = () => {
             <i className="fas fa-chevron-left" aria-hidden="true"></i>
           </button>
         )}
-        
+
         {/* Solo mostrar flecha derecha si no es la última página */}
         {!isLastPage && (
           <button
@@ -104,6 +102,13 @@ const Habilidades = () => {
           />
         ))}
       </div>
+
+      {/* Botón Continuar solo visible en la última página */}
+      {isLastPage && (
+        <div className="continuar-container">
+          <a className="button" href="#apps">Continuar</a>
+        </div>
+      )}
     </div>
   );
 };

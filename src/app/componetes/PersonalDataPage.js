@@ -26,7 +26,7 @@ const PersonalData = () => {
 
           {/* Botón Leer Más */}
           <a href="#habi">
-            <button type="button">Leer más...</button>
+            <button type="button">Continuar</button>
           </a>
         </div>
       </div>

@@ -1,10 +1,10 @@
 footer{
-    background-color: black;
+    background-color: #0f172a;
 }
 .contactame{
     width: 100%;
     height: 280px;
-    background-color:rgb(19, 19, 19);
+    background-color:#1e293b;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -12,15 +12,15 @@ footer{
 }
 
 .contactame p{
-    color: white;
+    color: #e2e8f0;
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 25px;
 }
 
 .contactame .botton-two{
-    background-color: #f9004d;
-    color:white ;
+    background-color: #5eead4;
+    color:black;
     text-decoration: none;
     border: 2px solid transparent;
     font-weight:bold ;
@@ -30,7 +30,8 @@ footer{
 }
 .contactame .botton-two:hover{
     background-color: transparent;
-    border: 2px solid #f9004d;
+    border: 2px solid #5eead4;
+    color: #e2e8f0;
     cursor: pointer;
 }
 
@@ -46,12 +47,12 @@ footer{
 
 footer p:nth-child(1){
     font-size: 30px;
-    color:white;
+    color:#e2e8f0;
     margin-bottom: 20px;
     font-weight: bold;
 }
 footer p:nth-child(2){
-    color: white;
+    color: #e2e8f0;
     font-size: 17px;
     width: 500px;
     text-align: center;
@@ -67,10 +68,10 @@ footer p:nth-child(2){
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f9004d;
+    background-color: #5eead4;
     border-radius: 50%;
     margin: 22px 10px;
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 20px;
 }

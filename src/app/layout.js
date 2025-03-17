@@ -3,7 +3,7 @@ import "./globals.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export const metadata = {
-  title: 'Mi Portafolio',
+  title: 'Federico Bustamante',
   description: 'Página personal con datos y proyectos.',
 };
 
