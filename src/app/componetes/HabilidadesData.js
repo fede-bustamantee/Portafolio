@@ -41,7 +41,7 @@ const Habilidades = () => {
         </h2>
       </div>
 
-      <div className="slider-container">
+      <div className="slider-container" data-aos="fade-up">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={currentPage}

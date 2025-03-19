@@ -19,7 +19,7 @@ const Aplicaciones = () => {
         </h2>
       </div>
       
-      <div className="slider-container">
+      <div className="slider-container" data-aos="fade-up">
         <Swiper
           modules={[Navigation]}
           slidesPerView={3}

@@ -18,8 +18,8 @@ const Contacto = () => {
       </footer>
 
       <div className="contactame">
-        <p>{personalData.nombreApellido}</p>
-        <a className="botton-two" href="#pagi">Volver</a>
+        <p data-aos="fade-up">{personalData.nombreApellido}</p>
+        <a data-aos="fade-up" className="botton-two" href="#pagi">Volver</a>
       </div>
     </div>
   );
