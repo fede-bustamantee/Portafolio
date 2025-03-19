@@ -306,22 +306,17 @@ button:hover{
 }
 
 /* Media queries para dispositivos móviles */
-/* Tabletas y dispositivos medianos */
-@media screen and (max-width: 992px) {
-    .contenido {
-        top: 30%;
-        left: 10%;
-        width: 80%;
+@media screen and (max-width: 768px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+        width: 100%;
     }
     
-    h1 {
-        font-size: 58px;
-        margin: 15px 0;
+    .secc {
+        width: 100%;
+        overflow-x: hidden;
     }
-}
-
-/* Teléfonos y dispositivos pequeños */
-@media screen and (max-width: 768px) {
     .menu-icon {
         display: block;
     }
@@ -355,7 +350,7 @@ button:hover{
     .contenido {
         top: 28%;
         left: 8%;
-        width: 84%;
+        width: 80%;
     }
 
     h1 {
@@ -371,48 +366,8 @@ button:hover{
         font-size: 20px;
     }
 
-    .textizquierda, .textderecha {
+    .textderecha {
         display: none;
     }
-}
-
-/* Dispositivos muy pequeños */
-@media screen and (max-width: 480px) {
-    nav {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
     
-    .contenido {
-        top: 25%;
-        left: 5%;
-        width: 90%;
-    }
-    
-    h1 {
-        font-size: 36px;
-    }
-    
-    h3 {
-        font-size: 18px;
-    }
-    
-    h4 {
-        font-size: 18px;
-    }
-    
-    button {
-        padding: 10px 20px;
-    }
-}
-
-/* Dispositivos muy pequeños en vertical */
-@media screen and (max-width: 320px) {
-    h1 {
-        font-size: 32px;
-    }
-    
-    .contenido {
-        top: 22%;
-    }
 }
