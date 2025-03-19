@@ -308,15 +308,10 @@ button:hover{
 /* Media queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
     html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-        width: 100%;
-    }
-    
-    .secc {
-        width: 100%;
-        overflow-x: hidden;
-    }
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
     .menu-icon {
         display: block;
     }
@@ -327,9 +322,9 @@ button:hover{
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: #0f172a;
+        width: 60%;
+        height: 60vh;
+        background-color: #020407;
         text-align: center;
         transition: 0.3s;
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
@@ -367,6 +362,9 @@ button:hover{
     }
 
     .textderecha {
+        display: none;
+    }
+    .textizquierda{
         display: none;
     }
     

@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "../styles/HomePage.css";
-import "aos/dist/aos.css"; // Importa el archivo CSS de AOS
-import AOS from "aos"; // Importa la librería de AOS
+import "aos/dist/aos.css";
+import AOS from "aos";
 import personalData from "../data/personaldata";
 import contacto from "../data/contacto";
 
@@ -10,12 +10,11 @@ const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Inicializa AOS cuando el componente se monte
     AOS.init({
-      easing: 'ease-out', // Tipo de easing
-      once: true, // Si la animación debe ejecutarse solo una vez
+      easing: "ease-out",
+      once: true,
     });
-  }, []); // El efecto se ejecuta solo una vez cuando el componente se monta
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -41,8 +40,8 @@ const Home = () => {
             <img src="/img/firme.png" alt="Logo" className="logo-img" data-aos="zoom-in" data-aos-duration="1000"/>
           </a>
 
-          <div className="menu-icon" onClick={toggleMenu}>
-            <i className="fa-solid fa-bars"></i>
+          <div className="menu-icon" onClick={toggleMenu} data-aos="zoom-in" data-aos-duration="1000">
+            <i className={menuOpen ? "fa-solid fa-times" : "fa-solid fa-bars"}></i>
           </div>
 
           <ul className={menuOpen ? "nav-menu active" : "nav-menu"}>
