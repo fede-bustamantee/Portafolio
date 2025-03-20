@@ -163,43 +163,6 @@ h5{
     justify-content: center;
 }
 
-/* Media queries para responsividad */
-@media screen and (max-width: 1200px) {
-    .titulo h2 {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .card {
-        width: 280px;
-        height: auto;
-        min-height: 340px;
-    }
-    
-    .arrow-button {
-        width: 35px;
-        height: 35px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .card {
-        width: 250px;
-        margin: 10px;
-        padding: 15px 25px;
-    }
-    
-    .titulo h2 {
-        font-size: 32px;
-    }
-    
-    .arrow-button {
-        width: 30px;
-        height: 30px;
-    }
-}
-
 /* Contenedor del botón Continuar */
 .continuar-container {
     display: flex;
@@ -231,11 +194,98 @@ h5{
     box-shadow: 0 4px 10px rgba(94, 234, 212, 0.8);
     cursor: pointer;
 }
-
-/* Responsive para botón */
+/* Media queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
+    .service {
+        height: 100vh; /* Forzamos la altura exacta */
+        padding: 20px 0;
+        overflow-y: hidden; /* Prevenimos scroll vertical */
+    }
+    
+    .titulo h2 {
+        width: 90%;
+        font-size: 24px;
+        margin: 10px auto;
+    }
+    
+    .titulo h2 small {
+        font-size: 16px;
+    }
+    
+    .box {
+        min-height: auto;
+        padding: 0;
+    }
+    
+    .card {
+        width: 260px;
+        height: auto;
+        min-height: 180px; /* Reducimos bastante la altura mínima */
+        padding: 10px 15px;
+        margin: 5px;
+    }
+    
+    .card i {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    
+    h5 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .parrafo p {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 10px;
+        max-height: 90px; /* Limitamos la altura del texto */
+        overflow-y: auto; /* Permitimos scroll solo en el texto */
+    }
+    
+    .card .button {
+        padding: 8px 15px;
+        font-size: 13px;
+        top: 15px;
+    }
+    
+    .slider-container {
+        padding: 0 15px;
+    }
+    
+    .arrow-button {
+        width: 25px;
+        height: 40px;
+        transform: translateY(-50%);
+    }
+    
+    .left-arrow {
+        left: 3px;
+    }
+    
+    .right-arrow {
+        right: 3px;
+    }
+    
+    .page-indicators {
+        margin-top: 5px;
+    }
+    
+    .page-dot {
+        width: 6px;
+        height: 6px;
+        margin: 0 2px;
+    }
+    
+    .continuar-container {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
     .continuar-container .button {
-        padding: 10px 25px;
-        font-size: 14px;
+        padding: 6px 15px;
+        font-size: 13px;
     }
 }
