@@ -81,3 +81,37 @@ footer p:nth-child(2){
     transition: .3s;
 
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .contactame p {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .conte p{
+        text-align: center;
+    }
+    .contactame .botton-two {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    footer p:nth-child(1) {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    footer p:nth-child(2) {
+        font-size: 14px;
+        width: 85%;
+        max-width: 400px;
+        line-height: 22px;
+    }
+
+    .redes a {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        margin: 10px 8px;
+    }
+}

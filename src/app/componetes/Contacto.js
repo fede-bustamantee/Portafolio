@@ -7,7 +7,7 @@ import contacto from "../data/contacto";
 
 const Contacto = () => {
   return (
-    <div>
+    <div className="conte">
       <footer id="con">
         <p data-aos-delay="25" data-aos="zoom-in">Te puedo hacer una hermosa página web contactame...</p>
         <div className="redes">

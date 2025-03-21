@@ -210,56 +210,7 @@ h5 {
   .card {
     cursor: default;
   }
-  
-  /* Animación de pulso para el círculo */
-  @keyframes pulseIndicator {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 10px rgba(94, 234, 212, 0.7);
-    }
-    50% {
-      transform: scale(1.2);
-      box-shadow: 0 0 20px rgba(94, 234, 212, 0.9);
-    }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 10px rgba(94, 234, 212, 0.7);
-    }
-  }
-/* Responsividad */
-@media screen and (max-width: 1200px) {
-    .titulo h2 {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .card {
-        height: auto;
-        min-height: 320px; /* Reducido de 340px a 320px */
-    }
-
-    .arrow-button {
-        width: 30px; /* Reducido de 35px a 30px */
-        height: 30px; /* Reducido de 35px a 30px */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .card {
-        padding: 12px 20px; /* Reducido de 15px 25px a 12px 20px */
-    }
-
-    .titulo h2 {
-        font-size: 30px; /* Reducido de 32px a 30px */
-    }
-
-    .arrow-button {
-        width: 25px; /* Reducido de 30px a 25px */
-        height: 25px; /* Reducido de 30px a 25px */
-    }
-}
-/* Estilo para el icono de la aplicación */
+  /* Estilo para el icono de la aplicación */
 .card .img {
     max-width: 100%;
     max-height: 150px;  /* Ajusta la altura máxima del icono */
@@ -284,7 +235,7 @@ h5 {
     border-radius: 30px;
     transition: .4s;
     margin-top: -10px;
-    margin-left: 1020px;
+    margin-left: 1030px;
 }
 .buut:hover{
     background-color: transparent;
@@ -292,4 +243,62 @@ h5 {
     color:#e2e8f0;
     cursor: pointer;
 
+}
+  
+  /* Animación de pulso para el círculo */
+  @keyframes pulseIndicator {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(94, 234, 212, 0.7);
+    }
+    50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 20px rgba(94, 234, 212, 0.9);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(94, 234, 212, 0.7);
+    }
+  }
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .aplicaciones{
+        min-height: 60vh;
+    }
+    .card .click-indicator {
+        opacity: 1;
+      }
+
+    .aplicaciones h2{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+.card h5{
+    font-size: 25px;
+}
+
+.card .parrafo{
+    margin-bottom: 20px;
+}
+.buut{
+    background-color: #e2e8f0;
+    color:black;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight:bold ;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+    margin-top: 20px;
+    margin-left: 140px;
+}
+/* Estilo para el icono de la aplicación */
+.card .img {
+    max-width: 100%;
+    max-height: 150px;  /* Ajusta la altura máxima del icono */
+    object-fit: contain;  /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px;  /* Espacio entre la imagen y el texto */
+    border-radius: 10px;  /* Redondea los bordes de la imagen si lo deseas */
+}
 }

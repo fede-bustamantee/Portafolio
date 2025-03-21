@@ -236,7 +236,7 @@ h5{
     }
     
     .parrafo p {
-        font-size: 13px;
+        font-size: 16px;
         line-height: 18px;
         margin-bottom: 10px;
         max-height: 90px; /* Limitamos la altura del texto */
@@ -260,11 +260,11 @@ h5{
     }
     
     .left-arrow {
-        left: 3px;
+        left: 10px;
     }
     
     .right-arrow {
-        right: 3px;
+        right: 10px;
     }
     
     .page-indicators {
@@ -278,7 +278,8 @@ h5{
     }
     
     .continuar-container {
-        margin-top: 10px;
+        margin-top: 30px;
+        margin-left: -2px;
         width: 100%;
         display: flex;
         justify-content: center;
