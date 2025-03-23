@@ -198,7 +198,7 @@ h5{
 @media screen and (max-width: 768px) {
     .service {
         height: 100vh; /* Forzamos la altura exacta */
-        padding: 20px 0;
+        padding: 10px 0;
         overflow-y: hidden; /* Prevenimos scroll vertical */
     }
     
@@ -221,8 +221,8 @@ h5{
         width: 260px;
         height: auto;
         min-height: 180px; /* Reducimos bastante la altura mínima */
-        padding: 10px 15px;
-        margin: 5px;
+        padding: 5px 10px;
+        margin: 1px;
     }
     
     .card i {

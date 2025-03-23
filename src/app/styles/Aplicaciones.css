@@ -263,7 +263,7 @@ h5 {
 /* Responsividad */
 @media screen and (max-width: 768px) {
     .aplicaciones{
-        min-height: 60vh;
+        min-height: 65vh;
     }
     .card .click-indicator {
         opacity: 1;
