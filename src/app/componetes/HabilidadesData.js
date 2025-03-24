@@ -1,13 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import habilidades from "../data/habilidades"; // Importando los datos
 import "../styles/Habilidades.css";
 
 const Habilidades = () => {
-  const itemsPerPage = 3; // Número de habilidades por página
+  const [itemsPerPage, setItemsPerPage] = useState(3); // Por defecto 3
   const [currentPage, setCurrentPage] = useState(0);
   const [direction, setDirection] = useState(0);
+
+  // Actualizar itemsPerPage en función del tamaño de pantalla
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth <= 768) {
+        setItemsPerPage(2); // En móviles, mostrar 2
+      } else {
+        setItemsPerPage(3); // En pantallas más grandes, mostrar 3
+      }
+    };
+
+    // Escuchar el cambio de tamaño de pantalla
+    window.addEventListener("resize", updateItemsPerPage);
+    updateItemsPerPage(); // Llamar la función al montar el componente
+
+    // Limpiar el evento al desmontar
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
 
   // Usamos los datos importados desde habilidades.js
   const habilidadesData = habilidades;
@@ -55,7 +73,10 @@ const Habilidades = () => {
             {currentItems.map((habilidad, index) => (
               <div key={index} className="box">
                 <div className="card">
-                  <i className={habilidad.icon} style={{ color: habilidad.color }}></i>
+                  <i
+                    className={habilidad.icon}
+                    style={{ color: habilidad.color }}
+                  ></i>
                   <h5>{habilidad.nombre}</h5>
                   <div className="parrafo">
                     <p>{habilidad.description}</p>
@@ -66,7 +87,6 @@ const Habilidades = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Solo mostrar flecha izquierda si no es la primera página */}
         {!isFirstPage && (
           <button
             onClick={anteriorImagen}
@@ -77,7 +97,6 @@ const Habilidades = () => {
           </button>
         )}
 
-        {/* Solo mostrar flecha derecha si no es la última página */}
         {!isLastPage && (
           <button
             onClick={siguienteImagen}
@@ -89,7 +108,6 @@ const Habilidades = () => {
         )}
       </div>
 
-      {/* Indicadores de página */}
       <div className="page-indicators">
         {Array.from({ length: totalPages }).map((_, index) => (
           <span
@@ -103,10 +121,11 @@ const Habilidades = () => {
         ))}
       </div>
 
-      {/* Botón Continuar solo visible en la última página */}
       {isLastPage && (
         <div className="continuar-container">
-          <a className="button" href="#apps">Continuar</a>
+          <a className="button" href="#apps">
+            Continuar
+          </a>
         </div>
       )}
     </div>

@@ -198,7 +198,7 @@ h5{
 @media screen and (max-width: 768px) {
     .service {
         height: 100vh; /* Forzamos la altura exacta */
-        padding: 10px 0;
+        padding: 20px 0;
         overflow-y: hidden; /* Prevenimos scroll vertical */
     }
     
@@ -214,14 +214,12 @@ h5{
     
     .box {
         min-height: auto;
-        padding: 0;
     }
     
     .card {
         width: 260px;
         height: auto;
-        min-height: 180px; /* Reducimos bastante la altura mínima */
-        padding: 5px 10px;
+        min-height: 275px; /* Reducimos bastante la altura mínima */
         margin: 1px;
     }
     
@@ -243,12 +241,6 @@ h5{
         overflow-y: auto; /* Permitimos scroll solo en el texto */
     }
     
-    .card .button {
-        padding: 8px 15px;
-        font-size: 13px;
-        top: 15px;
-    }
-    
     .slider-container {
         padding: 0 15px;
     }
@@ -256,15 +248,15 @@ h5{
     .arrow-button {
         width: 25px;
         height: 40px;
-        transform: translateY(-50%);
+        top: 270px;
     }
     
     .left-arrow {
-        left: 10px;
+        left: 8px;
     }
     
     .right-arrow {
-        right: 10px;
+        right: 8px;
     }
     
     .page-indicators {
