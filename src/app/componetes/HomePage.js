@@ -20,6 +20,19 @@ const Home = () => {
     setMenuOpen(!menuOpen);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      // Si el menú está abierto y el clic no fue en el menú ni en el icono, se cierra
+      if (menuOpen && !e.target.closest(".nav-menu") && !e.target.closest(".menu-icon")) {
+        setMenuOpen(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handleClickOutside);
+  
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [menuOpen]);
+
   return (
     <div>
       <div className="textizquierda" data-aos-delay="100" data-aos="zoom-in">
