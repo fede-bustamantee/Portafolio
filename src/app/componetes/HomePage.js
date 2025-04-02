@@ -40,6 +40,7 @@ const Home = () => {
         <a href={contacto.github}><i className="fab fa-github"></i></a>
         <a href={contacto.whatsapp}><i className="fab fa-whatsapp"></i></a>
         <a href={contacto.gmail}><i className="fa-regular fa-envelope"></i></a>
+        <a href={contacto.linkedin}><i className="fa-brands fa-linkedin"></i></a>
       </div>
 
       <div className="textderecha" data-aos-delay="100" data-aos="zoom-in">

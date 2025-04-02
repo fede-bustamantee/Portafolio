@@ -14,6 +14,7 @@ const Contacto = () => {
           <div data-aos-delay="50" data-aos="zoom-in"><a href={contacto.github}><i className="fab fa-github"></i></a></div>
           <div data-aos-delay="100" data-aos="zoom-in"><a href={contacto.whatsapp}><i className="fab fa-whatsapp"></i></a></div>
           <div data-aos-delay="200" data-aos="zoom-in"><a href={contacto.gmail}><i className="fa-regular fa-envelope"></i></a></div>
+          <div data-aos-delay="200" data-aos="zoom-in"><a href={contacto.linkedin}><i className="fa-brands fa-linkedin"></i></a></div>
         </div>
       </footer>
 
