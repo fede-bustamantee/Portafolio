@@ -8,14 +8,14 @@ const PersonalData = () => {
   return (
     <section id="mi" className="about">
       <div className="main" data-aos="fade-up" data-aos-duration="100">
-        
-      <Image
-        src={personalData.urlimagen} // Usa la URL de la imagen desde el objeto
-        alt={`Foto de ${personalData.nombreApellido}`}
-        width={300}
-        height={300}
-        className="profile-image"
-      />
+
+        <Image
+          src={personalData.urlimagen} // Usa la URL de la imagen desde el objeto
+          alt={`Foto de ${personalData.nombreApellido}`}
+          width={300}
+          height={300}
+          className="profile-image"
+        />
 
         {/* Información personal */}
         <div className="about-text" data-aos="fade-up">
@@ -23,11 +23,15 @@ const PersonalData = () => {
             <small>01.</small> Acerca de mí
           </h2>
           <p>{personalData.myFullDescription}</p>
-
-          {/* Botón Leer Más */}
-          <a href="#habi">
-            <button type="button">Continuar</button>
-          </a>
+          {/* Contenedor de botones para separarlos */}
+          <div className="button-container">
+            <a href="#habi">
+              <button type="button">Continuar</button>
+            </a>
+            <a href="/curriculum.pdf" download>
+              <button type="button">Ver Curriculum</button>
+            </a>
+          </div>
         </div>
       </div>
     </section>

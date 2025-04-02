@@ -1,21 +1,27 @@
-.about{
+.about {
     height: 100vh;
     width: auto;
     padding: 80px 0px;
     background-color: #1e293b;
 }
+
 .about img {
     height: auto;
     width: 300px;
     filter: opacity(0.7) drop-shadow(0 0 0 rgb(31, 38, 99));
-    transition: transform 0.4s ease, filter 0.4s ease; /* Transición suave */
-    border-radius: 15px; /* Bordes redondeados para un look más moderno */
+    transition: transform 0.4s ease, filter 0.4s ease;
+    /* Transición suave */
+    border-radius: 15px;
+    /* Bordes redondeados para un look más moderno */
 }
+
 /* Efecto al pasar el mouse */
 .about img:hover {
-    filter: opacity(1) drop-shadow(0 0 4px #5eead4); /* Sombra más sutil */
+    filter: opacity(1) drop-shadow(0 0 4px #5eead4);
+    /* Sombra más sutil */
     transform: scale(1.1);
-    box-shadow: 0 1px 1px rgba(94, 234, 212, 0.5); /* Sombra pequeña y con transparencia */
+    box-shadow: 0 1px 1px rgba(94, 234, 212, 0.5);
+    /* Sombra pequeña y con transparencia */
 }
 
 /* Efecto extra: animación de "rebote" al terminar */
@@ -23,10 +29,12 @@
     transform: scale(1.05);
     transition: transform 0.1s ease;
 }
-.about-text{
+
+.about-text {
     width: 550px;
 }
-.main{
+
+.main {
     width: 1130px;
     max-width: 95%;
     margin: 0 auto;
@@ -34,14 +42,16 @@
     align-items: center;
     justify-content: space-around;
 }
-.about-text h2{
-    color:#5eead4;
+
+.about-text h2 {
+    color: #5eead4;
     font-size: 40px;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
-h2 small{
-    color:#e2e8f0;
+
+h2 small {
+    color: #e2e8f0;
     letter-spacing: 2px;
     font-size: 22px;
     margin-bottom: 25px;
@@ -52,42 +62,58 @@ h2 small{
 .about-text p {
     color: #e2e8f0;
     letter-spacing: 1px;
-    line-height: 28px; /* Espaciado entre líneas */
+    line-height: 28px;
+    /* Espaciado entre líneas */
     font-size: 18px;
     margin-bottom: 45px;
 
     /* Control de altura y scroll */
-    max-height: 280px; /* Ajustá la altura máxima según te guste */
-    overflow-y: auto; /* Agrega la barra de desplazamiento vertical */
-    padding-right: 10px; /* Espaciado para que no quede pegado al borde */
-    scrollbar-width: thin; /* Barra de desplazamiento más delgada (para Firefox) */
-    scrollbar-color: #5eead4 transparent; /* Personaliza la barra */
+    max-height: 280px;
+    /* Ajustá la altura máxima según te guste */
+    overflow-y: auto;
+    /* Agrega la barra de desplazamiento vertical */
+    padding-right: 10px;
+    /* Espaciado para que no quede pegado al borde */
+    scrollbar-width: thin;
+    /* Barra de desplazamiento más delgada (para Firefox) */
+    scrollbar-color: #5eead4 transparent;
+    /* Personaliza la barra */
 }
 
 /* Estilizar la barra de scroll en navegadores Webkit (Chrome/Edge) */
 .about-text p::-webkit-scrollbar {
-    width: 8px; /* Ancho de la barra */
+    width: 8px;
+    /* Ancho de la barra */
 }
 
 .about-text p::-webkit-scrollbar-thumb {
-    background-color: rgb(209, 98, 209); /* Color de la barra */
+    background-color: rgb(209, 98, 209);
+    /* Color de la barra */
     border-radius: 10px;
 }
 
-button{
+.button-container {
+    display: flex;
+    gap: 10px;
+    /* Ajusta el espacio entre los botones */
+    margin-top: 20px;
+}
+
+button {
     background-color: #e2e8f0;
-    color:black;
+    color: black;
     text-decoration: none;
     border: 2px solid transparent;
-    font-weight:bold ;
+    font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
     transition: .4s;
 }
-button:hover{
+
+button:hover {
     background-color: transparent;
     border: 2px solid #e2e8f0;
-    color:#e2e8f0;
+    color: #e2e8f0;
     cursor: pointer;
 
 }
@@ -98,41 +124,43 @@ button:hover{
         height: 100vh;
         padding: 15px 20px;
     }
-    
+
     .main {
         width: 100%;
         flex-direction: column;
         text-align: center;
     }
-    
+
     .about img {
         width: 200px;
         height: auto;
         margin: 0 auto 20px;
-        order: 1; /* Para que aparezca primero */
+        order: 1;
+        /* Para que aparezca primero */
     }
-    
+
     .about-text {
         width: 100%;
-        order: 2; /* Para que aparezca después de la imagen */
+        order: 2;
+        /* Para que aparezca después de la imagen */
     }
-    
+
     .about-text h2 {
         font-size: 28px;
         margin-bottom: 15px;
     }
-    
+
     h2 small {
         font-size: 18px;
     }
-    
+
     .about-text p {
         font-size: 16px;
         line-height: 25px;
         margin-bottom: 30px;
         max-height: 300px;
     }
-    
+
     button {
         padding: 10px 20px;
     }
