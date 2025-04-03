@@ -27,9 +27,9 @@ const Home = () => {
         setMenuOpen(false);
       }
     };
-  
+
     document.addEventListener("mousedown", handleClickOutside);
-  
+
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [menuOpen]);
 
@@ -51,7 +51,7 @@ const Home = () => {
       <div className="secc" id="pagi">
         <nav>
           <a href="/" className="logo">
-            <img src="/img/firme.png" alt="Logo" className="logo-img" data-aos="zoom-in" data-aos-duration="1000"/>
+            <img src="/img/firme.png" alt="Logo" className="logo-img" data-aos="zoom-in" data-aos-duration="1000" />
           </a>
 
           <div className="menu-icon" onClick={toggleMenu} data-aos="zoom-in" data-aos-duration="1000">

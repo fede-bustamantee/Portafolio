@@ -18,7 +18,7 @@ const Aplicaciones = () => {
           <small>03.</small> Mis Aplicaciones
         </h2>
       </div>
-      
+
       <div className="slider-container" data-aos="fade-up">
         <Swiper
           modules={[Navigation]}
@@ -40,7 +40,7 @@ const Aplicaciones = () => {
                 <Link href={`/aplicaciones/${app.id}`}>
                   <div className="click-indicator"></div>
                 </Link>
-                <img className="img" src={app.icon} alt="Icono"/>
+                <img className="img" src={app.icon} alt="Icono" />
                 <h5>{app.nombre}</h5>
                 <div className="parrafo">
                   <p>{app.description}</p>
@@ -50,7 +50,7 @@ const Aplicaciones = () => {
           ))}
         </Swiper>
       </div>
-      
+
       {showButton && (
         <a href="#con">
           <button className="buut" type="button">Continuar</button>

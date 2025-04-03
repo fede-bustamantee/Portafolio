@@ -1,41 +1,43 @@
-footer{
+footer {
     background-color: #0f172a;
 }
-.contactame{
+
+.contactame {
     width: 100%;
     height: 280px;
-    background-color:#1e293b;
+    background-color: #1e293b;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
 
-.contactame p{
+.contactame p {
     color: #e2e8f0;
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 25px;
 }
 
-.contactame .botton-two{
+.contactame .botton-two {
     background-color: #5eead4;
-    color:black;
+    color: black;
     text-decoration: none;
     border: 2px solid transparent;
-    font-weight:bold ;
+    font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
     transition: .4s;
 }
-.contactame .botton-two:hover{
+
+.contactame .botton-two:hover {
     background-color: transparent;
     border: 2px solid #5eead4;
     color: #e2e8f0;
     cursor: pointer;
 }
 
-footer{
+footer {
     position: relative;
     width: 100%;
     height: 340px;
@@ -45,13 +47,14 @@ footer{
     justify-content: center;
 }
 
-footer p:nth-child(1){
+footer p:nth-child(1) {
     font-size: 30px;
-    color:#e2e8f0;
+    color: #e2e8f0;
     margin-bottom: 20px;
     font-weight: bold;
 }
-footer p:nth-child(2){
+
+footer p:nth-child(2) {
     color: #e2e8f0;
     font-size: 17px;
     width: 500px;
@@ -59,10 +62,11 @@ footer p:nth-child(2){
     line-height: 26px;
 }
 
-.redes{
+.redes {
     display: flex;
 }
-.redes a{
+
+.redes a {
     width: 45px;
     height: 45px;
     display: flex;
@@ -76,7 +80,7 @@ footer p:nth-child(2){
     font-size: 20px;
 }
 
-.redes a:hover{
+.redes a:hover {
     transform: scale(1.3);
     transition: .3s;
 
@@ -88,9 +92,11 @@ footer p:nth-child(2){
         font-size: 18px;
         margin-bottom: 15px;
     }
-    .conte p{
+
+    .conte p {
         text-align: center;
     }
+
     .contactame .botton-two {
         padding: 12px 25px;
         font-size: 16px;

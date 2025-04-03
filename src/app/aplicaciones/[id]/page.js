@@ -9,7 +9,7 @@ export default function DetalleAplicacion() {
   const params = useParams();
   const { id } = params;
   const aplicacion = aplicaciones.find((app) => app.id === id);
-  
+
   // Estado para el modal
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -31,7 +31,7 @@ export default function DetalleAplicacion() {
   // Navegar a la imagen anterior
   const prevImage = (e) => {
     e.stopPropagation(); // Evitar que el clic cierre el modal
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? aplicacion.imagenes.length - 1 : prevIndex - 1
     );
   };
@@ -39,7 +39,7 @@ export default function DetalleAplicacion() {
   // Navegar a la imagen siguiente
   const nextImage = (e) => {
     e.stopPropagation(); // Evitar que el clic cierre el modal
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === aplicacion.imagenes.length - 1 ? 0 : prevIndex + 1
     );
   };
@@ -96,47 +96,47 @@ export default function DetalleAplicacion() {
 
   return (
     <div className="detalle-fullscreen-container">
-      
+
       <h1 className="detalle-title">{aplicacion.nombre}</h1>
-      
+
       <div className="detalle-images-container">
         {aplicacion.imagenes.map((imagen, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="detalle-image-card"
             onClick={() => openModal(index)}
           >
-            <img 
-              src={imagen} 
-              alt={`${aplicacion.nombre} - Imagen ${index + 1}`} 
+            <img
+              src={imagen}
+              alt={`${aplicacion.nombre} - Imagen ${index + 1}`}
             />
           </div>
         ))}
       </div>
-      
+
       {/* Modal para imágenes ampliadas */}
-      <div 
+      <div
         className={`detalle-modal-overlay ${modalOpen ? 'active' : ''}`}
         onClick={closeModal}
       >
         <div className="detalle-modal-content" onClick={(e) => e.stopPropagation()}>
-          <img 
-            src={aplicacion.imagenes[currentImageIndex]} 
+          <img
+            src={aplicacion.imagenes[currentImageIndex]}
             alt={`${aplicacion.nombre} - Imagen ampliada`}
             className="detalle-modal-image"
           />
-          
+
           <button className="detalle-modal-close" onClick={closeModal}>
-          <i className="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </button>
-          
+
           {aplicacion.imagenes.length > 1 && (
             <>
               <button className="detalle-modal-nav detalle-modal-prev" onClick={prevImage}>
-              <i className="fa-solid fa-angle-left"></i>
+                <i className="fa-solid fa-angle-left"></i>
               </button>
               <button className="detalle-modal-nav detalle-modal-next" onClick={nextImage}>
-              <i className="fa-solid fa-angle-right"></i>
+                <i className="fa-solid fa-angle-right"></i>
               </button>
               <div className="detalle-modal-counter">
                 {currentImageIndex + 1} / {aplicacion.imagenes.length}

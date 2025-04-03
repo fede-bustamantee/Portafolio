@@ -28,7 +28,7 @@ const PersonalData = () => {
             <a href="#habi">
               <button type="button">Continuar</button>
             </a>
-            <a href="/curriculum.pdf" download>
+            <a href="/curriculum" target="_blank" rel="noopener noreferrer">
               <button type="button">Ver Curriculum</button>
             </a>
           </div>

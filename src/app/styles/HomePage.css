@@ -3,26 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .textizquierda {
     color: #e2e8f0;
     position: fixed;
     font-size: 14px;
     letter-spacing: 12px;
-    writing-mode: vertical-lr; /* Escritura vertical */
-    text-orientation: upright; /* Orientación del texto */
+    writing-mode: vertical-lr;
+    /* Escritura vertical */
+    text-orientation: upright;
+    /* Orientación del texto */
     padding: 5px;
-    top: 400px; /* Ajusta la posición del texto */
+    top: 400px;
+    /* Ajusta la posición del texto */
     left: 15px;
     z-index: 1000;
 }
 
 .lineavertical {
     position: fixed;
-    top: 110px; /* Ajusta la posición de la línea para que esté debajo del texto */
-    left: 15px; /* Alinea la línea con el texto */
-    width: 2px; /* Grosor de la línea */
-    height: 180px; /* Altura de la línea */
-    background-color: #5eead4; /* Color de la línea */
+    top: 110px;
+    /* Ajusta la posición de la línea para que esté debajo del texto */
+    left: 15px;
+    /* Alinea la línea con el texto */
+    width: 2px;
+    /* Grosor de la línea */
+    height: 180px;
+    /* Altura de la línea */
+    background-color: #5eead4;
+    /* Color de la línea */
 }
 
 .textderecha {
@@ -30,30 +39,40 @@
     position: fixed;
     font-size: 14px;
     letter-spacing: 2px;
-    writing-mode: vertical-lr; /* Escritura vertical de izquierda a derecha */
-    text-orientation: upright; /* Orientación del texto vertical */
+    writing-mode: vertical-lr;
+    /* Escritura vertical de izquierda a derecha */
+    text-orientation: upright;
+    /* Orientación del texto vertical */
     padding: 5px;
-    top: 400px; /* Ajusta la posición del texto */
-    left: 1300px; /* Ajusta la posición del texto a la derecha */
+    top: 400px;
+    /* Ajusta la posición del texto */
+    left: 1300px;
+    /* Ajusta la posición del texto a la derecha */
     z-index: 1000;
 }
 
 .linea-vertical {
     position: fixed;
-    top: 80px; /* Ajusta la posición de la línea para que esté debajo del texto */
-    left: 15px; /* Alinea la línea con el texto */
-    width: 2px; /* Grosor de la línea */
-    height: 180px; /* Altura de la línea */
-    background-color: #5eead4; /* Color de la línea */
+    top: 80px;
+    /* Ajusta la posición de la línea para que esté debajo del texto */
+    left: 15px;
+    /* Alinea la línea con el texto */
+    width: 2px;
+    /* Grosor de la línea */
+    height: 180px;
+    /* Altura de la línea */
+    background-color: #5eead4;
+    /* Color de la línea */
 }
 
-.secc{
+.secc {
     background-color: #0f172a;
     height: 100vh;
     background-size: cover;
     background-position: center;
 }
-nav{
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,12 +80,13 @@ nav{
     padding-left: 8%;
     padding-right: 8%;
 }
-nav a{
+
+nav a {
     text-decoration: none;
 }
 
 /*logo*/
-.logo{
+.logo {
     color: #e2e8f0;
     font-size: 40px;
     letter-spacing: 1px;
@@ -74,11 +94,14 @@ nav a{
     transition: transform .4s;
     text-transform: uppercase;
 }
-.logo:hover{
+
+.logo:hover {
     transform: scale(1.2);
 }
+
 .logo-img {
-    width: 50px; /* Ajusta según el tamaño deseado */
+    width: 50px;
+    /* Ajusta según el tamaño deseado */
     height: auto;
     transition: transform .4s;
 }
@@ -89,13 +112,14 @@ nav a{
 
 
 /*atajos*/
-nav ul li{
+nav ul li {
     list-style-type: none;
     display: inline-block;
     padding: 10px 15px;
-    
+
 }
-nav ul li a{
+
+nav ul li a {
     font-size: 18px;
     color: #e2e8f0;
     text-decoration: none;
@@ -103,51 +127,58 @@ nav ul li a{
     text-transform: capitalize;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #5eead4;
     transform: .4s;
 }
 
 
 /*informacionPersonal*/
-.contenido{
-    position:absolute;
+.contenido {
+    position: absolute;
     top: 32%;
     left: 14%;
-}  
-h4{
-    color:#5eead4;
+}
+
+h4 {
+    color: #5eead4;
     letter-spacing: 2px;
     font-size: 28px;
 }
-h1{
-    color:#e2e8f0;
-    margin:20px -50px 20px;
+
+h1 {
+    color: #e2e8f0;
+    margin: 20px -50px 20px;
     font-size: 75px;
 }
-h3{
-    color:#5eead4;
+
+h3 {
+    color: #5eead4;
     font-size: 28px;
     margin-bottom: 25px;
 }
-.filtro{
+
+.filtro {
     display: none;
 }
-button{
+
+button {
     background-color: #5eead4;
-    color:#e2e8f0;
+    color: #e2e8f0;
     text-decoration: none;
     border: 2px solid transparent;
-    font-weight:bold ;
+    font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
     transition: .4s;
 }
-button:hover{
+
+button:hover {
     background-color: transparent;
     border: 2px solid #5eead4;
     cursor: pointer;
 }
+
 /* Menú hamburguesa - solo visible en móviles */
 .menu-icon {
     display: none;
@@ -160,17 +191,19 @@ button:hover{
 
 /* Media queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
-    body{
+    body {
         margin: 0;
         padding: 0;
         width: 100%;
     }
+
     .main-container {
         width: 100%;
         overflow-x: hidden;
         overflow-y: auto;
         position: relative;
     }
+
     .menu-icon {
         display: block;
     }
@@ -204,7 +237,7 @@ button:hover{
         display: flex;
         align-items: center;
         justify-content: center;
-        border:2px solid #5eead4;
+        border: 2px solid #5eead4;
         border-radius: 50px 50px 50px 50px;
         background-color: #0f172a;
     }
@@ -231,11 +264,13 @@ button:hover{
     .textderecha {
         display: none;
     }
-    .textizquierda{
+
+    .textizquierda {
         display: none;
     }
-    button{
+
+    button {
         margin-top: 15px;
     }
-    
+
 }
