@@ -19,7 +19,8 @@ export default function CurriculumPage() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        height: "100vh"
+                        height: "100vh",
+                        background:"#1e293b"
                     }}>Cargando...
                 </p>
             )}

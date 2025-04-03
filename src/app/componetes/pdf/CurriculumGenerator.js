@@ -129,10 +129,10 @@ const CurriculumGenerator = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-[#1e293b] p-6">
             <h1 className="text-3xl font-bold mb-8">Currículum Vitae</h1>
             
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full mb-8">
+            <div className="bg-white text-black p-10 rounded-lg shadow-lg max-w-3xl w-full mb-3">
                 <h2 className="text-2xl font-semibold mb-4">Información Personal</h2>
                 <p><strong>Nombre:</strong> {curriculumData.nombre}</p>
                 <p><strong>Fecha de Nacimiento:</strong> {curriculumData.fechaNacimiento}</p>
@@ -141,18 +141,18 @@ const CurriculumGenerator = () => {
                 <p><strong>Teléfono:</strong> {curriculumData.telefono}</p>
                 
                 <div className="mt-4">
-                    <a href={curriculumData.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mr-4">LinkedIn</a>
-                    <a href={curriculumData.github} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mr-4">GitHub</a>
-                    <a href={curriculumData.portafolio} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Portafolio</a>
+                    <a href={curriculumData.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mr-4">Mi LinkedIn</a>
+                    <a href={curriculumData.github} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mr-4">Mi GitHub</a>
+                    <a href={curriculumData.portafolio} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Mi Portafolio</a>
                 </div>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full mb-8">
+            <div className="bg-white text-black p-8 rounded-lg shadow-lg max-w-3xl w-full mb-3">
                 <h2 className="text-2xl font-semibold mb-4">Perfil Profesional</h2>
                 <p>{curriculumData.perfil}</p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full mb-8">
+            <div className="bg-white text-black p-8 rounded-lg shadow-lg max-w-3xl w-full mb-3">
                 <h2 className="text-2xl font-semibold mb-4">Educación</h2>
                 {curriculumData.educacion.map((edu, index) => (
                     <div key={index} className="mb-2">
@@ -161,7 +161,7 @@ const CurriculumGenerator = () => {
                 ))}
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full mb-8">
+            <div className="bg-white text-black p-8 rounded-lg shadow-lg max-w-3xl w-full mb-3">
                 <h2 className="text-2xl font-semibold mb-4">Habilidades Técnicas</h2>
                 <ul className="list-disc pl-6">
                     {curriculumData.habilidades.map((habilidad, index) => (
@@ -170,7 +170,7 @@ const CurriculumGenerator = () => {
                 </ul>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full mb-8">
+            <div className="bg-white text-black p-8 rounded-lg shadow-lg max-w-3xl w-full mb-3">
                 <h2 className="text-2xl font-semibold mb-4">Proyectos Destacados</h2>
                 {curriculumData.proyectos.map((proyecto, index) => (
                     <div key={index} className="mb-4">
@@ -180,7 +180,7 @@ const CurriculumGenerator = () => {
                 ))}
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full mb-8">
+            <div className="bg-white text-black p-8 rounded-lg shadow-lg max-w-3xl w-full mb-3">
                 <h2 className="text-2xl font-semibold mb-4">Idiomas</h2>
                 <ul className="list-disc pl-6">
                     {curriculumData.idiomas.map((idioma, index) => (
@@ -192,7 +192,7 @@ const CurriculumGenerator = () => {
             <button
                 onClick={generatePDF}
                 disabled={generating}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 disabled:bg-blue-400"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-3xl shadow-md transition duration-300 disabled:bg-blue-400 cursor-pointer"
             >
                 {generating ? "Generando PDF..." : "Descargar CV en PDF"}
             </button>
