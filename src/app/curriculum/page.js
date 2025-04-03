@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import PdfCurriculum from "../componetes/pdf/PdfCurriculum";
-import { PDFViewer } from "@react-pdf/renderer";
+import CurriculumGenerator from "../componetes/pdf/CurriculumGenerator";
 
 export default function CurriculumPage() {
     const [isClient, setIsClient] = useState(false);
@@ -13,9 +12,7 @@ export default function CurriculumPage() {
     return (
         <div className="pdf-container">
             {isClient ? (
-                <PDFViewer style={{ width: "100%", height: "100vh" }}>
-                    <PdfCurriculum />
-                </PDFViewer>
+                <CurriculumGenerator />
             ) : (
                 <p
                     style={{
