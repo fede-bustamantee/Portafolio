@@ -13,7 +13,7 @@ const Habilidades = () => {
   useEffect(() => {
     const updateItemsPerPage = () => {
       if (window.innerWidth <= 768) {
-        setItemsPerPage(2); // En móviles, mostrar 2
+        setItemsPerPage(3); // En móviles, mostrar 2
       } else {
         setItemsPerPage(2); // En pantallas más grandes, mostrar 3
       }

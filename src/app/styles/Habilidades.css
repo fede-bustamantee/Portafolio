@@ -1,10 +1,10 @@
-/* Estilos Base */
 .service {
     height: 100vh;
     padding: 40px 0px;
     margin-left: 250px;
     width: auto;
 }
+
 .titulo h2 {
     color: #5eead4;
     font-size: 30px;
@@ -46,9 +46,11 @@
     margin: 15px 0px;
     color: #5e9bea;
 }
+
 .card {
     cursor: default;
 }
+
 h5 {
     color: #5eead4;
     font-size: 23px;
@@ -61,6 +63,7 @@ h5 {
     line-height: 27px;
     margin-bottom: 25px;
 }
+
 .continuar-container .button {
     background-color: #e2e8f0;
     color: black;
@@ -82,7 +85,6 @@ h5 {
     cursor: pointer;
 }
 
-/* Estilos del Carrusel */
 .slider-container {
     position: relative;
     width: 100%;
@@ -90,7 +92,6 @@ h5 {
     padding: 0 50px;
 }
 
-/* Flechas de navegación */
 .arrow-button {
     position: absolute;
     top: 50%;
@@ -130,7 +131,6 @@ h5 {
     right: 50px;
 }
 
-/* Indicadores de página */
 .page-indicators {
     display: flex;
     justify-content: center;
@@ -152,14 +152,12 @@ h5 {
     transform: scale(1.2);
 }
 
-/* Ajustes para animación */
 .contenedor-habilidades {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-/* Contenedor del botón Continuar */
 .continuar-container {
     display: flex;
     justify-content: center;
@@ -167,8 +165,6 @@ h5 {
     margin-left: 800px;
 }
 
-
-/* Botón Continuar final */
 .continuar-container .button {
     background-color: #5eead4;
     color: #0f172a;
@@ -182,7 +178,6 @@ h5 {
     animation: pulse 1.5s infinite ease-in-out;
 }
 
-/* Efecto hover */
 .continuar-container .button:hover {
     background-color: transparent;
     color: #5eead4;
@@ -191,96 +186,114 @@ h5 {
     cursor: pointer;
 }
 
-/* Media queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
     .service {
-        height: 100vh;
-        /* Forzamos la altura exacta */
-        padding: 20px 0;
-        overflow-y: hidden;
-        /* Prevenimos scroll vertical */
+        height: auto;
+        margin-left: 0;
+        padding: 30px 15px;
     }
 
     .titulo h2 {
-        width: 90%;
-        font-size: 24px;
-        margin: 10px auto;
+        margin-left: 0;
+        text-align: center;
+        font-size: 26px;
     }
 
-    .titulo h2 small {
-        font-size: 16px;
-    }
-
-    .box {
-        min-height: auto;
+    .contenedor-habilidades {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
     .card {
-        width: 260px;
+        width: 85%;
+        max-width: 320px;
         height: auto;
-        min-height: 275px;
-        /* Reducimos bastante la altura mínima */
-        margin: 1px;
+        margin: 10px auto;
+        padding: 15px;
     }
 
     .card i {
-        font-size: 30px;
+        font-size: 40px;
         margin: 10px 0;
     }
 
     h5 {
-        font-size: 18px;
-        margin-bottom: 5px;
+        font-size: 20px;
     }
 
     .parrafo p {
-        font-size: 16px;
-        line-height: 18px;
-        margin-bottom: 10px;
-        max-height: 90px;
-        /* Limitamos la altura del texto */
-        overflow-y: auto;
-        /* Permitimos scroll solo en el texto */
+        font-size: 15px;
+        line-height: 24px;
     }
 
     .slider-container {
-        padding: 0 15px;
+        padding: 0 20px;
     }
 
     .arrow-button {
-        width: 25px;
+        width: 40px;
         height: 40px;
-        top: 270px;
+        font-size: 12px;
     }
 
     .left-arrow {
-        left: 8px;
+        left: 5px;
     }
 
     .right-arrow {
-        right: 8px;
+        right: 5px;
     }
 
     .page-indicators {
-        margin-top: 5px;
+        margin-top: 20px;
     }
 
-    .page-dot {
-        width: 6px;
-        height: 6px;
-        margin: 0 2px;
+    .button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service {
+        padding: 20px 10px;
     }
 
-    .continuar-container {
-        margin-top: 30px;
-        margin-left: -2px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    .titulo h2 {
+        font-size: 24px;
+    }
+
+    .card {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .card i {
+        font-size: 35px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    .parrafo p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .arrow-button {
+        width: 35px;
+        height: 35px;
     }
 
     .continuar-container .button {
-        padding: 6px 15px;
+        padding: 8px 18px;
         font-size: 13px;
+    }
+
+    .page-dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
     }
 }

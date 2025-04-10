@@ -11,14 +11,14 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     flex-direction: row;
 }
 
 .about-text {
-    width: 60%; /* Cambiado a porcentaje para mejor responsividad */
-    padding-right: 40px; /* Espacio entre el texto y la imagen */
-    order: 1; /* Asegura que el texto esté primero (izquierda) */
+    width: 60%;
+    padding-right: 40px;
+    order: 1;
 }
 
 .about img {
@@ -28,15 +28,15 @@
     transition: transform 0.4s ease, filter 0.4s ease;
     border-radius: 15px;
     margin-right: 25px;
-    order: 2; /* Asegura que la imagen esté a la derecha */
+    order: 2;
 }
 
-/* Efecto al pasar el mouse */
 .about img:hover {
     filter: opacity(1) drop-shadow(0 0 4px #5eead4);
     transform: scale(1.1);
     box-shadow: 0 1px 1px rgba(94, 234, 212, 0.5);
 }
+
 .about img:active {
     transform: scale(1.05);
     transition: transform 0.1s ease;
@@ -64,7 +64,7 @@ h2 small {
     font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 90px; 
+    margin-left: 90px;
     max-height: 390px;
     overflow-y: auto;
     padding-right: 10px;
@@ -72,7 +72,6 @@ h2 small {
     scrollbar-color: #5eead4 transparent;
 }
 
-/* Estilizar la barra de scroll en navegadores Webkit (Chrome/Edge) */
 .about-text p::-webkit-scrollbar {
     width: 8px;
 }
@@ -85,8 +84,8 @@ h2 small {
 .button-container {
     display: flex;
     gap: 10px;
-    margin-left: 90px; 
-    margin-top: 30px; /* Espacio entre el párrafo y los botones */
+    margin-left: 90px;
+    margin-top: 30px;
 }
 
 button {
@@ -106,36 +105,37 @@ button:hover {
     color: #e2e8f0;
     cursor: pointer;
 }
-/* Media queries para dispositivos móviles */
+
 @media screen and (max-width: 768px) {
     .about {
-        height: 100vh;
-        padding: 15px 20px;
+        height: auto;
+        margin-left: 0;
+        padding: 5px 15px;
     }
 
     .main {
         width: 100%;
         flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        width: 100%;
+        padding-right: 0;
+        order: 2;
         text-align: center;
     }
 
     .about img {
         width: 200px;
-        height: auto;
-        margin: 0 auto 20px;
+        margin-right: 0;
+        margin-bottom: 20px;
         order: 1;
-        /* Para que aparezca primero */
-    }
-
-    .about-text {
-        width: 100%;
-        order: 2;
-        /* Para que aparezca después de la imagen */
     }
 
     .about-text h2 {
-        font-size: 28px;
-        margin-bottom: 15px;
+        margin-left: 0;
+        font-size: 26px;
     }
 
     h2 small {
@@ -143,13 +143,55 @@ button:hover {
     }
 
     .about-text p {
+        width: 100%;
+        margin-left: 0;
         font-size: 16px;
-        line-height: 25px;
-        margin-bottom: 30px;
-        max-height: 300px;
+        line-height: 24px;
+        padding: 0 10px;
+    }
+
+    .button-container {
+        margin-left: 0;
+        justify-content: center;
     }
 
     button {
         padding: 10px 20px;
+    }
+
+    .btncontinuar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about {
+        padding: 5px 10px;
+    }
+
+    .about img {
+        width: 180px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    h2 small {
+        font-size: 16px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .btncontinuar {
+        display: none;
     }
 }

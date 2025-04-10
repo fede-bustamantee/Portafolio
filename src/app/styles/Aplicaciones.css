@@ -1,4 +1,3 @@
-/* Estilos Base - Mantén todos tus estilos actuales */
 .aplicaciones {
     width: auto;
     min-height: 100vh;
@@ -13,17 +12,13 @@
     padding: 20px 0 0 0;
 }
 
-/* Ajustamos el estilo de la tarjeta */
 .card {
     height: 380px;
     width: 98%;
-    /* Cambiado de 100% a 98% para acercar más */
     padding: 20px 30px;
-    /* Reducido el padding horizontal */
     background: #0d0b1d;
     border-radius: 20px;
     margin: 10px 0;
-    /* Reducido de 15px a 10px */
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -41,7 +36,6 @@
 .card i {
     font-size: 50px;
     margin: 15px 0;
-    /* Reducido de 20px a 15px */
     color: #4CAF50;
 }
 
@@ -49,16 +43,13 @@ h5 {
     color: white;
     font-size: 22px;
     margin-bottom: 8px;
-    /* Reducido de 10px a 8px */
 }
 
 .parrafo p {
     color: #b0b0b0;
     font-size: 16px;
     line-height: 22px;
-    /* Reducido de 24px a 22px */
     margin-bottom: 15px;
-    /* Reducido de 20px a 15px */
 }
 
 .card .button {
@@ -68,7 +59,6 @@ h5 {
     border: 2px solid transparent;
     font-weight: bold;
     padding: 10px 20px;
-    /* Reducido de 12px 25px a 10px 20px */
     border-radius: 30px;
     transition: .3s;
     margin-top: auto;
@@ -82,19 +72,15 @@ h5 {
     cursor: pointer;
 }
 
-/* Carrusel - Ajustamos el padding para acercar más */
 .slider-container {
     position: relative;
     width: 100%;
     overflow: hidden;
     padding: 0 40px;
-    /* Reducido de 50px a 40px */
 }
 
-/* Ajustamos los estilos de Swiper */
 .swiper {
     padding: 10px 5px;
-    /* Reducido de 20px 10px a 10px 5px */
 }
 
 .swiper-slide {
@@ -103,12 +89,10 @@ h5 {
     justify-content: center;
 }
 
-/* Ajustamos las flechas de navegación para acercarlas */
 .swiper-button-prev,
 .swiper-button-next {
     color: #e2e8f0;
     margin: 0 -15px;
-    /* Acercamos las flechas */
 }
 
 .swiper-button-prev:hover,
@@ -119,7 +103,6 @@ h5 {
 .swiper-button-prev:after,
 .swiper-button-next:after {
     font-size: 24px;
-    /* Hacemos las flechas más pequeñas */
 }
 
 .arrow-button {
@@ -130,9 +113,7 @@ h5 {
     color: white;
     border: none;
     width: 35px;
-    /* Reducido de 40px a 35px */
     height: 35px;
-    /* Reducido de 40px a 35px */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -140,7 +121,6 @@ h5 {
     cursor: pointer;
     z-index: 10;
     font-size: 16px;
-    /* Reducido de 18px a 16px */
     transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -155,31 +135,24 @@ h5 {
 
 .left-arrow {
     left: 15px;
-    /* Cambiado de 20px a 10px */
 }
 
 .right-arrow {
     right: 15px;
-    /* Cambiado de 20px a 10px */
 }
 
-/* Indicadores de página */
 .page-indicators {
     display: flex;
     justify-content: center;
     margin-top: 15px;
-    /* Reducido de 20px a 15px */
 }
 
 .page-dot {
     width: 10px;
-    /* Reducido de 12px a 10px */
     height: 10px;
-    /* Reducido de 12px a 10px */
     border-radius: 50%;
     background-color: #444;
     margin: 0 4px;
-    /* Reducido de 5px a 4px */
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -189,7 +162,6 @@ h5 {
     transform: scale(1.2);
 }
 
-/* Estilos para el indicador de clic */
 .click-indicator {
     position: absolute;
     top: 15px;
@@ -199,7 +171,6 @@ h5 {
     background-color: #5eead4;
     border-radius: 50%;
     opacity: 1;
-    /* Inicialmente invisible */
     transition: opacity 0.3s ease, transform 0.3s ease;
     animation: pulseIndicator 1.5s infinite ease-in-out;
     display: flex;
@@ -209,7 +180,6 @@ h5 {
     z-index: 100;
 }
 
-/* El icono dentro del círculo */
 .click-indicator:after {
     content: "👀";
     position: absolute;
@@ -220,38 +190,27 @@ h5 {
     transform: translate(-50%, -50%);
 }
 
-
-/* Efecto hover específico para el indicador */
 .click-indicator:hover {
     transform: scale(1.2);
     box-shadow: 0 0 20px rgba(94, 234, 212, 0.9);
 }
 
-/* Ajustamos la card para que no tenga cursor pointer */
 .card {
     cursor: default;
 }
 
-/* Estilo para el icono de la aplicación */
 .card .img {
     max-width: 100%;
     max-height: 150px;
-    /* Ajusta la altura máxima del icono */
     object-fit: contain;
-    /* Mantiene la proporción de la imagen */
     margin-bottom: 20px;
-    /* Espacio entre la imagen y el texto */
     border-radius: 10px;
-    /* Redondea los bordes de la imagen si lo deseas */
 }
 
-/* Si quieres asegurarte de que el icono no se distorsione */
 .card .img {
     width: auto;
     height: 100px;
-    /* Ajusta el tamaño de la imagen de acuerdo a tus necesidades */
     margin-bottom: 15px;
-    /* Espacio entre la imagen y el texto */
 }
 
 .buut {
@@ -274,77 +233,154 @@ h5 {
 
 }
 
-/* Animación de pulso para el círculo */
-@keyframes pulseIndicator {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(94, 234, 212, 0.7);
-    }
-
-    50% {
-        transform: scale(1.2);
-        box-shadow: 0 0 20px rgba(94, 234, 212, 0.9);
-    }
-
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(94, 234, 212, 0.7);
-    }
-}
-
-/* Responsividad */
 @media screen and (max-width: 768px) {
     .aplicaciones {
-        min-height: 75vh;
+        margin-left: 0;
+        padding: 15px 10px;
+        width: 100%;
+        min-height: 100px;
     }
 
-    .card .click-indicator {
-        opacity: 1;
+    .tituloa h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 26px;
+        padding: 15px 0 0 0;
     }
 
-    .aplicaciones h2 {
-        padding-top: 30px;
-        padding-bottom: 20px;
+    .card {
+        height: auto;
+        min-height: 200px;
+        width: 90%;
+        padding: 15px 20px;
+        margin: 10px auto;
+        background-color: #388E3C;
     }
 
-    .card h5 {
-        font-size: 25px;
+    .card i {
+        font-size: 40px;
+        margin: 10px 0;
     }
 
-    .card .parrafo {
-        margin-bottom: 20px;
+    h5 {
+        font-size: 20px;
+    }
+
+    .parrafo p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .card .button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .card .img {
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .slider-container {
+        padding: 0 30px;
+    }
+
+    .arrow-button {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .left-arrow {
+        left: 5px;
+    }
+
+    .right-arrow {
+        right: 5px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 20px;
+    }
+
+    .page-indicators {
+        margin-top: 10px;
     }
 
     .buut {
-        background-color: #e2e8f0;
-        color: black;
-        text-decoration: none;
-        border: 2px solid transparent;
-        font-weight: bold;
-        padding: 13px 30px;
-        border-radius: 30px;
-        transition: 0.4s;
-
-        /* Centrado completo */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px auto;
-        /* Centrar horizontalmente */
-        height: 100%;
-        /* Asegurar que ocupe todo el alto del contenedor */
+        display: none;
     }
 
-    /* Estilo para el icono de la aplicación */
+    .click-indicator {
+        width: 25px;
+        height: 25px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .click-indicator:after {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aplicaciones {
+        padding: 10px 5px;
+        min-height: 100px;
+    }
+
+    .tituloa h2 {
+        font-size: 24px;
+    }
+
+    .card {
+        width: 95%;
+        padding: 12px 15px;
+        min-height: 320px;
+    }
+
+    .card i {
+        font-size: 35px;
+        margin: 8px 0;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    .parrafo p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .card .button {
+        padding: 7px 16px;
+        font-size: 13px;
+    }
+
     .card .img {
-        max-width: 100%;
-        max-height: 150px;
-        /* Ajusta la altura máxima del icono */
-        object-fit: contain;
-        /* Mantiene la proporción de la imagen */
-        margin-bottom: 20px;
-        /* Espacio entre la imagen y el texto */
-        border-radius: 10px;
-        /* Redondea los bordes de la imagen si lo deseas */
+        height: 70px;
+    }
+
+    .arrow-button {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 18px;
+    }
+
+    .page-dot {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
+    }
+
+    .buut {
+        display: none;
     }
 }

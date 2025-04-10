@@ -23,7 +23,7 @@ const PersonalData = () => {
           <p>{personalData.myFullDescription}</p>
           <div className="button-container">
             <a href="#habi">
-              <button type="button">Continuar</button>
+              <button className="btncontinuar" type="button">Continuar</button>
             </a>
             <a href="/curriculum" target="_blank" rel="noopener noreferrer">
               <button type="button">Ver Curriculum</button>

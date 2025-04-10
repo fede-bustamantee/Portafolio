@@ -75,7 +75,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <header className="header" data-aos="zoom-in" data-aos-duration="500">
+      <header className="header">
         <a href="/" className="logo">
           <img
             src="/img/firme.png"

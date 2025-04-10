@@ -88,38 +88,80 @@ footer p:nth-child(2) {
 
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    .contactame p {
-        font-size: 18px;
-        margin-bottom: 15px;
+@media screen and (max-width: 768px) {
+    footer {
+        padding-left: 0;
+        padding-top: 15px;
+        height: auto;
+        padding-bottom: 20px;
     }
 
-    .conte p {
+    .contactame {
+        margin-left: 0;
+        height: auto;
+        padding: 30px 15px;
+        width: 100%;
+    }
+
+    .contactame p {
+        font-size: 22px;
         text-align: center;
+        margin-bottom: 20px;
     }
 
     .contactame .botton-two {
-        padding: 12px 25px;
-        font-size: 16px;
+        padding: 10px 25px;
+        font-size: 15px;
     }
 
     footer p:nth-child(1) {
-        font-size: 24px;
-        margin-bottom: 12px;
+        font-size: 26px;
+        margin-bottom: 15px;
     }
 
     footer p:nth-child(2) {
-        font-size: 14px;
-        width: 85%;
-        max-width: 400px;
-        line-height: 22px;
+        font-size: 15px;
+        width: 90%;
+        max-width: 500px;
+        line-height: 24px;
+    }
+
+    .redes {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .redes a {
         width: 40px;
         height: 40px;
+        margin: 15px 8px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contactame p {
+        font-size: 20px;
+    }
+
+    .contactame .botton-two {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    footer p:nth-child(1) {
+        font-size: 24px;
+    }
+
+    footer p:nth-child(2) {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .redes a {
+        width: 35px;
+        height: 35px;
+        margin: 12px 6px;
         font-size: 16px;
-        margin: 10px 8px;
     }
 }

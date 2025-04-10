@@ -1,8 +1,6 @@
-/* Contenedor principal con un fondo más oscuro y efecto de partículas */
 .detalle-fullscreen-container {
   width: 100vw;
   height: 100vh;
-  /* Fondo más oscuro */
   background-image: radial-gradient(circle at 30% 50%, rgba(25, 30, 45, 0.4) 0%, transparent 80%),
     radial-gradient(circle at 70% 20%, rgba(20, 35, 60, 0.4) 0%, transparent 70%);
   display: flex;
@@ -14,7 +12,6 @@
   overflow: hidden;
 }
 
-/* Efecto de luz superior */
 .detalle-fullscreen-container::before {
   content: '';
   position: absolute;
@@ -27,7 +24,6 @@
   pointer-events: none;
 }
 
-/* Título grande y llamativo */
 .detalle-title {
   color: #fff;
   font-size: 3.5rem;
@@ -55,7 +51,6 @@
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
 }
 
-/* Contenedor de imágenes en masonry layout */
 .detalle-images-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -63,12 +58,10 @@
   padding: 20px;
   width: 100%;
   max-width: 1800px;
-  /* Más ancho para mostrar más imágenes */
   max-height: 80vh;
   overflow-y: auto;
   scrollbar-width: thin;
   align-items: start;
-  /* Para el efecto masonry */
   z-index: 5;
 }
 
@@ -90,7 +83,6 @@
   background: rgba(59, 130, 246, 0.5);
 }
 
-/* Tarjetas de imágenes con efecto neomórfico */
 .detalle-image-card {
   position: relative;
   border-radius: 20px;
@@ -104,7 +96,6 @@
   transform-origin: center;
   backdrop-filter: blur(5px);
   cursor: pointer;
-  /* Indica que es clickeable */
 }
 
 .detalle-image-card:hover {
@@ -118,7 +109,6 @@
 .detalle-image-card img {
   width: 100%;
   height: 350px;
-  /* Imágenes más grandes */
   object-fit: cover;
   border-radius: 12px;
   transition: all 0.5s ease;
@@ -133,7 +123,6 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Efecto de brillo al hacer hover */
 .detalle-image-card::after {
   content: '';
   position: absolute;
@@ -150,7 +139,6 @@
   transform: translateX(0%) translateY(0%) rotate(45deg);
 }
 
-/* Modal para imagen ampliada */
 .detalle-modal-overlay {
   position: fixed;
   top: 0;
@@ -212,7 +200,6 @@
   background: rgb(0, 70, 184);
 }
 
-/* Controles de navegación en el modal */
 .detalle-modal-nav {
   position: absolute;
   top: 50%;
@@ -245,7 +232,6 @@
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
 
-/* Indicador de imagen actual */
 .detalle-modal-counter {
   position: absolute;
   bottom: -20px;
@@ -261,7 +247,6 @@
   border: solid 1PX black;
 }
 
-/* Animación para cargar las imágenes con efecto fade-in */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -279,7 +264,6 @@
   opacity: 0;
 }
 
-/* Aplicar retraso a cada tarjeta para efecto escalonado */
 .detalle-image-card:nth-child(1) {
   animation-delay: 0.1s;
 }
@@ -312,7 +296,6 @@
   animation-delay: 0.8s;
 }
 
-/* Diseño responsive con breakpoints */
 @media (max-width: 1200px) {
   .detalle-images-container {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
