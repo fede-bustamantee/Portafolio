@@ -2,7 +2,6 @@
 .detalle-fullscreen-container {
   width: 100vw;
   height: 100vh;
-  background: #090d14;
   /* Fondo más oscuro */
   background-image: radial-gradient(circle at 30% 50%, rgba(25, 30, 45, 0.4) 0%, transparent 80%),
     radial-gradient(circle at 70% 20%, rgba(20, 35, 60, 0.4) 0%, transparent 70%);

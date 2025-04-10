@@ -10,41 +10,34 @@ export default function DetalleAplicacion() {
   const { id } = params;
   const aplicacion = aplicaciones.find((app) => app.id === id);
 
-  // Estado para el modal
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Abrir modal con la imagen seleccionada
   const openModal = (index) => {
     setCurrentImageIndex(index);
     setModalOpen(true);
-    // Prevenir scroll cuando el modal está abierto
     document.body.style.overflow = 'hidden';
   };
 
-  // Cerrar modal
   const closeModal = () => {
     setModalOpen(false);
     document.body.style.overflow = 'auto';
   };
 
-  // Navegar a la imagen anterior
   const prevImage = (e) => {
-    e.stopPropagation(); // Evitar que el clic cierre el modal
+    e.stopPropagation();
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? aplicacion.imagenes.length - 1 : prevIndex - 1
     );
   };
 
-  // Navegar a la imagen siguiente
   const nextImage = (e) => {
-    e.stopPropagation(); // Evitar que el clic cierre el modal
+    e.stopPropagation();
     setCurrentImageIndex((prevIndex) =>
       prevIndex === aplicacion.imagenes.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  // Cerrar modal al presionar ESC
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") closeModal();
@@ -55,34 +48,6 @@ export default function DetalleAplicacion() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [modalOpen]);
-
-  // Manejo del botón de retroceso
-  useEffect(() => {
-    const secciones = ['#mi', '#habi', '#apps', '#con'];
-    const detectarSeccionOrigen = () => {
-      const referer = document.referrer;
-      for (const seccion of secciones) {
-        if (referer.includes(seccion)) {
-          return seccion;
-        }
-      }
-      return '/';
-    };
-
-    const seccionOrigen = detectarSeccionOrigen();
-    sessionStorage.setItem('seccionOrigen', seccionOrigen);
-
-    const handlePopState = () => {
-      const seccion = sessionStorage.getItem('seccionOrigen') || '/';
-      window.location.href = seccion;
-    };
-
-    window.addEventListener('popstate', handlePopState);
-
-    return () => {
-      window.removeEventListener('popstate', handlePopState);
-    };
-  }, []);
 
   if (!aplicacion) {
     return (
@@ -113,8 +78,6 @@ export default function DetalleAplicacion() {
           </div>
         ))}
       </div>
-
-      {/* Modal para imágenes ampliadas */}
       <div
         className={`detalle-modal-overlay ${modalOpen ? 'active' : ''}`}
         onClick={closeModal}

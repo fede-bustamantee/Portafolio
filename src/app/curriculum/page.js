@@ -20,7 +20,6 @@ export default function CurriculumPage() {
                         alignItems: "center",
                         justifyContent: "center",
                         height: "100vh",
-                        background:"#1e293b"
                     }}>Cargando...
                 </p>
             )}

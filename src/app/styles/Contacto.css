@@ -1,5 +1,4 @@
 footer {
-    background-color: #0f172a;
     padding-top: 20px;
     padding-left: 240px;
     display: block;
@@ -8,7 +7,6 @@ footer {
 .contactame {
     width: auto;
     height: 280px;
-    background-color: #0f172a;
     display: flex;
     align-items: center;
     flex-direction: column;

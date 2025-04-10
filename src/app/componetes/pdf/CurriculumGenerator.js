@@ -120,14 +120,12 @@ const CurriculumGenerator = () => {
             doc.text(`• ${idioma}`, 25, yPos);
             yPos += 8;
         });
-        
-        // Guardar el PDF
         doc.save("curriculum.pdf");
         setGenerating(false);
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-[#1e293b] p-6">
+        <div className="flex flex-col items-center justify-center min-h-screen p-6">
             <h1 className="text-3xl font-bold mb-8">Currículum Vitae</h1>
             
             <div className="bg-white text-black p-10 rounded-lg shadow-lg max-w-3xl w-full mb-3">
