@@ -199,7 +199,7 @@ h5 {
     height: 30px;
     background-color: #5eead4;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 1;
     /* Inicialmente invisible */
     transition: opacity 0.3s ease, transform 0.3s ease;
     animation: pulseIndicator 1.5s infinite ease-in-out;
@@ -221,10 +221,6 @@ h5 {
     transform: translate(-50%, -50%);
 }
 
-/* Solo mostramos el indicador cuando el cursor está sobre la tarjeta */
-.card:hover .click-indicator {
-    opacity: 1;
-}
 
 /* Efecto hover específico para el indicador */
 .click-indicator:hover {

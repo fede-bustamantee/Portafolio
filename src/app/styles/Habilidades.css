@@ -47,7 +47,9 @@
     margin: 15px 0px;
     color: #5e9bea;
 }
-
+.card {
+    cursor: default;
+}
 h5 {
     color: #5eead4;
     font-size: 23px;
