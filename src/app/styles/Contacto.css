@@ -1,15 +1,19 @@
 footer {
     background-color: #0f172a;
+    padding-top: 20px;
+    padding-left: 240px;
+    display: block;
 }
 
 .contactame {
-    width: 100%;
+    width: auto;
     height: 280px;
-    background-color: #1e293b;
+    background-color: #0f172a;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    margin-left: 250px;
 }
 
 .contactame p {

@@ -1,37 +1,9 @@
 .about {
     height: 100vh;
     width: auto;
-    padding: 80px 0px;
-    background-color: #1e293b;
-}
-
-.about img {
-    height: auto;
-    width: 300px;
-    filter: opacity(0.7) drop-shadow(0 0 0 rgb(31, 38, 99));
-    transition: transform 0.4s ease, filter 0.4s ease;
-    /* Transición suave */
-    border-radius: 15px;
-    /* Bordes redondeados para un look más moderno */
-}
-
-/* Efecto al pasar el mouse */
-.about img:hover {
-    filter: opacity(1) drop-shadow(0 0 4px #5eead4);
-    /* Sombra más sutil */
-    transform: scale(1.1);
-    box-shadow: 0 1px 1px rgba(94, 234, 212, 0.5);
-    /* Sombra pequeña y con transparencia */
-}
-
-/* Efecto extra: animación de "rebote" al terminar */
-.about img:active {
-    transform: scale(1.05);
-    transition: transform 0.1s ease;
-}
-
-.about-text {
-    width: 550px;
+    padding: 35px 0px;
+    background-color: #0f172a;
+    margin-left: 250px;
 }
 
 .main {
@@ -40,63 +12,82 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between; 
+    flex-direction: row;
+}
+
+.about-text {
+    width: 60%; /* Cambiado a porcentaje para mejor responsividad */
+    padding-right: 40px; /* Espacio entre el texto y la imagen */
+    order: 1; /* Asegura que el texto esté primero (izquierda) */
+}
+
+.about img {
+    height: auto;
+    width: 250px;
+    filter: opacity(0.7) drop-shadow(0 0 0 rgb(31, 38, 99));
+    transition: transform 0.4s ease, filter 0.4s ease;
+    border-radius: 15px;
+    margin-right: 25px;
+    order: 2; /* Asegura que la imagen esté a la derecha */
+}
+
+/* Efecto al pasar el mouse */
+.about img:hover {
+    filter: opacity(1) drop-shadow(0 0 4px #5eead4);
+    transform: scale(1.1);
+    box-shadow: 0 1px 1px rgba(94, 234, 212, 0.5);
+}
+.about img:active {
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
 }
 
 .about-text h2 {
     color: #5eead4;
-    font-size: 40px;
+    font-size: 30px;
     text-transform: capitalize;
-    margin-bottom: 20px;
+    margin-left: 90px;
+
 }
 
 h2 small {
     color: #e2e8f0;
-    letter-spacing: 2px;
     font-size: 22px;
-    margin-bottom: 25px;
     text-transform: capitalize;
-
 }
 
 .about-text p {
     color: #e2e8f0;
     letter-spacing: 1px;
     line-height: 28px;
-    /* Espaciado entre líneas */
+    width: 400px;
     font-size: 18px;
-    margin-bottom: 45px;
-
-    /* Control de altura y scroll */
-    max-height: 280px;
-    /* Ajustá la altura máxima según te guste */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 90px; 
+    max-height: 390px;
     overflow-y: auto;
-    /* Agrega la barra de desplazamiento vertical */
     padding-right: 10px;
-    /* Espaciado para que no quede pegado al borde */
     scrollbar-width: thin;
-    /* Barra de desplazamiento más delgada (para Firefox) */
     scrollbar-color: #5eead4 transparent;
-    /* Personaliza la barra */
 }
 
 /* Estilizar la barra de scroll en navegadores Webkit (Chrome/Edge) */
 .about-text p::-webkit-scrollbar {
     width: 8px;
-    /* Ancho de la barra */
 }
 
 .about-text p::-webkit-scrollbar-thumb {
     background-color: rgb(209, 98, 209);
-    /* Color de la barra */
     border-radius: 10px;
 }
 
 .button-container {
     display: flex;
     gap: 10px;
-    /* Ajusta el espacio entre los botones */
-    margin-top: 20px;
+    margin-left: 90px; 
+    margin-top: 30px; /* Espacio entre el párrafo y los botones */
 }
 
 button {
@@ -115,9 +106,7 @@ button:hover {
     border: 2px solid #e2e8f0;
     color: #e2e8f0;
     cursor: pointer;
-
 }
-
 /* Media queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
     .about {

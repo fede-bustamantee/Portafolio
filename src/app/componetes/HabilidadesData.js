@@ -15,7 +15,7 @@ const Habilidades = () => {
       if (window.innerWidth <= 768) {
         setItemsPerPage(2); // En móviles, mostrar 2
       } else {
-        setItemsPerPage(3); // En pantallas más grandes, mostrar 3
+        setItemsPerPage(2); // En pantallas más grandes, mostrar 3
       }
     };
 

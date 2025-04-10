@@ -16,14 +16,11 @@ const PersonalData = () => {
           height={300}
           className="profile-image"
         />
-
-        {/* Información personal */}
         <div className="about-text" data-aos="fade-up">
           <h2>
             <small>01.</small> Acerca de mí
           </h2>
           <p>{personalData.myFullDescription}</p>
-          {/* Contenedor de botones para separarlos */}
           <div className="button-container">
             <a href="#habi">
               <button type="button">Continuar</button>

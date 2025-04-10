@@ -9,7 +9,7 @@ const Contacto = () => {
   return (
     <div className="conte">
       <footer id="con">
-        <p data-aos-delay="25" data-aos="zoom-in">Te puedo hacer una hermosa página web contactame...</p>
+        <p data-aos-delay="25" data-aos="zoom-in">contactame...</p>
         <div className="redes">
           <div data-aos-delay="50" data-aos="zoom-in"><a href={contacto.github}><i className="fab fa-github"></i></a></div>
           <div data-aos-delay="100" data-aos="zoom-in"><a href={contacto.whatsapp}><i className="fab fa-whatsapp"></i></a></div>
@@ -19,8 +19,8 @@ const Contacto = () => {
       </footer>
 
       <div className="contactame">
-        <p data-aos="fade-up">{personalData.nombreApellido}</p>
-        <a data-aos="fade-up" className="botton-two" href="#pagi">Volver</a>
+        <p data-aos="fade-up">puedo diseñar algo único adaptado a tus necesidades</p>
+        <a data-aos="fade-up" className="botton-two" href="#">Volver</a>
       </div>
     </div>
   );

@@ -31,12 +31,12 @@ const curriculum = {
         {
             nombre: "Cooperadora Escolar",
             descripcion:
-                "Aplicación diseñada para la gestión y administración de pagos, cobros y reportes de alumnos. Su objetivo principal es reducir el tiempo invertido en tareas administrativas, optimizando los procesos de gestión escolar.",
+                "Aplicación integral desarrollada para optimizar la gestión administrativa de cooperadoras escolares. El sistema permite automatizar el registro y control de pagos realizados por los alumnos o sus familiares, generar reportes detallados sobre el estado financiero, y gestionar información clave de los alumnos. Con esta herramienta, se simplifican procesos como la emisión de comprobantes, el seguimiento de deudas, facilitando la tarea de los responsables administrativos. Tecnologías utilizadas: Next.js para la interfaz de usuario, Node.js y Express en el backend, y MongoDB como base de datos principal, garantizando una solución escalable y moderna.",
         },
         {
             nombre: "Food Macano",
             descripcion:
-                "Desarrollo de tres aplicaciones (web, móvil y de escritorio) para la gestión integral de un restaurante. Estas aplicaciones permiten administrar pedidos tanto en el local como para entregas a domicilio, facilitando la experiencia tanto para los administradores del restaurante como para los clientes, quienes pueden realizar pedidos desde la web o la app.",
+                "Sistema integral de gestión para restaurantes, desarrollado con el objetivo de centralizar y automatizar las operaciones clave del negocio gastronómico. Esta solución multiplataforma (web, móvil y escritorio) permite a los administradores y empleados gestionar de forma eficiente los pedidos de clientes, controlar el stock de productos e insumos, coordinar entregas y realizar un seguimiento completo de las ventas. Tecnologías utilizadas: Frontend Web: Blazor WebAssembly. Aplicación Móvil: .NET MAUI, permitiendo una interfaz nativa multiplataforma. Aplicación de Escritorio: Windows Forms, ideal para estaciones de trabajo en el local. Backend: ASP.NET, responsable de la lógica de negocio y conexión con la base de datos. Base de datos: MySQL, para un manejo robusto, seguro y escalable de la información",
         },
     ],
     idiomas: ["Español - Nativo", "Inglés Técnico"],

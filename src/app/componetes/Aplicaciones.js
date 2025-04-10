@@ -13,7 +13,7 @@ const Aplicaciones = () => {
 
   return (
     <div id="apps" className="aplicaciones">
-      <div className="titulo" data-aos="fade-up">
+      <div className="tituloa" data-aos="fade-up">
         <h2>
           <small>03.</small> Mis Aplicaciones
         </h2>
@@ -23,15 +23,15 @@ const Aplicaciones = () => {
         <Swiper
           modules={[Navigation]}
           slidesPerView={3}
-          spaceBetween={10}
+          spaceBetween={5}
           navigation
           loop={false}
           onReachEnd={() => setShowButton(true)}
           onSlidePrevTransitionStart={() => setShowButton(false)}
           breakpoints={{
-            320: { slidesPerView: 1, spaceBetween: 10 },
-            768: { slidesPerView: 2, spaceBetween: 15 },
-            1024: { slidesPerView: 3, spaceBetween: 20 },
+            320: { slidesPerView: 1},
+            768: { slidesPerView: 2},
+            1024: { slidesPerView: 2},
           }}
         >
           {aplicaciones.map((app, index) => (

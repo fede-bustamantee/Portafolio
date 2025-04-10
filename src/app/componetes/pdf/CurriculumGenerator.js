@@ -22,8 +22,6 @@ const CurriculumGenerator = () => {
         doc.setFontSize(12);
         doc.setFont("helvetica", "normal");
         doc.text(`Nombre: ${curriculumData.nombre}`, 20, 40);
-        doc.text(`Fecha de Nacimiento: ${curriculumData.fechaNacimiento}`, 20, 48);
-        doc.text(`Edad: ${curriculumData.edad} años`, 20, 56);
         doc.text(`Email: ${curriculumData.email}`, 20, 64);
         doc.text(`Teléfono: ${curriculumData.telefono}`, 20, 72);
         
@@ -135,8 +133,6 @@ const CurriculumGenerator = () => {
             <div className="bg-white text-black p-10 rounded-lg shadow-lg max-w-3xl w-full mb-3">
                 <h2 className="text-2xl font-semibold mb-4">Información Personal</h2>
                 <p><strong>Nombre:</strong> {curriculumData.nombre}</p>
-                <p><strong>Fecha de Nacimiento:</strong> {curriculumData.fechaNacimiento}</p>
-                <p><strong>Edad:</strong> {curriculumData.edad} años</p>
                 <p><strong>Email:</strong> {curriculumData.email}</p>
                 <p><strong>Teléfono:</strong> {curriculumData.telefono}</p>
                 

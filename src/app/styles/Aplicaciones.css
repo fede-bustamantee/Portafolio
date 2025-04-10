@@ -1,18 +1,17 @@
 /* Estilos Base - Mantén todos tus estilos actuales */
 .aplicaciones {
-    background-color: #1e293b;
-    width: 100%;
+    background-color: #0f172a;
+    width: auto;
     min-height: 100vh;
     padding: 20px 0;
+    margin-left: 265px;
 }
 
-.titulo h2 {
-    color: white;
-    font-size: 40px;
-    width: 1130px;
-    margin: 20px auto;
-    /* Reducido de 30px a 20px */
-    text-align: center;
+.tituloa h2 {
+    color: #5eead4;
+    font-size: 30px;
+    margin-left: 90px;
+    padding: 20px 0 0 0;
 }
 
 /* Ajustamos el estilo de la tarjeta */
@@ -269,8 +268,7 @@ h5 {
     padding: 13px 30px;
     border-radius: 30px;
     transition: .4s;
-    margin-top: -10px;
-    margin-left: 1030px;
+    margin-left: 530px;
 }
 
 .buut:hover {
