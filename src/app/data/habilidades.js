@@ -14,7 +14,7 @@ const habilidades = [
   {
     icon: "fa-solid fa-laptop-code",
     nombre: "C# y .NET",
-    description: "Manejo de C# y .NET para el desarrollo de aplicaciones de escritorio y móviles con .NET MAUI, Blazor y Windows Forms.",
+    description: "Manejo de C# y .NET para el desarrollo de aplicaciones Web con Blazor WebAssembly.",
     color: "#9b59b6"
 
   },

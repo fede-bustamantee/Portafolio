@@ -8,7 +8,7 @@ const curriculum = {
     github: "https://github.com/fede-bustamantee",
     portafolio: "https://portafolio-fede-bustamantees-projects.vercel.app/",
     perfil:
-        "Soy un Desarrollador Full Stack, orientado a resultados con pasión por crear aplicaciones eficientes y experiencias digitales intuitivas. Con 3 años de experiencia en el desarrollo de aplicaciones web, móvil y de escritorio. Especializado en tecnologías clave, por ejemplo: React, Node.js. Apasionado por la resolución de problemas y la mejora continua en el desarrollo de software.",
+        "Soy un Desarrollador Frontend, orientado a resultados con pasión por crear aplicaciones eficientes y experiencias digitales intuitivas. Con 3 años de experiencia en el desarrollo de aplicaciones web. Especializado en tecnologías clave, por ejemplo: React, Node.js. Apasionado por la resolución de problemas y la mejora continua en el desarrollo de software.",
     educacion: [
         {
             titulo:
