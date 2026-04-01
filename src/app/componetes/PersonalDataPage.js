@@ -10,7 +10,7 @@ const PersonalData = () => {
       <div className="main" data-aos="fade-up" data-aos-duration="100">
 
         <Image
-          src={personalData.urlimagen} // Usa la URL de la imagen desde el objeto
+          src={personalData.urlimagen}
           alt={`Foto de ${personalData.nombreApellido}`}
           width={300}
           height={300}
