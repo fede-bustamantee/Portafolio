@@ -2,8 +2,8 @@
 const nextConfig = {
     images: {
         domains: ["firebasestorage.googleapis.com",
-    "gamladeoalrxtfbzkbsc.supabase.co"], 
-      },
+            "https://supabase.com/"]
+    },
 };
 
 export default nextConfig;
