@@ -36,16 +36,20 @@ const Aplicaciones = () => {
         >
           {aplicaciones.map((app, index) => (
             <SwiperSlide key={index}>
+                <a href={`/aplicaciones/${app.id}`} rel="noopener noreferrer">
+
               <div className="card">
-                <a href={`/aplicaciones/${app.id}`} target="_blank" rel="noopener noreferrer">
-                  <div className="click-indicator"></div>
-                  </a>
+                  <div className="click-indicator">
+                    <img src="/img/clic.png" alt="icono" />
+                  </div>
+                  
                 <img className="img" src={app.icon} alt="Icono" />
                 <h5>{app.nombre}</h5>
                 <div className="parrafo">
                   <p>{app.description}</p>
                 </div>
               </div>
+              </a>
             </SwiperSlide>
           ))}
         </Swiper>

@@ -31,6 +31,7 @@
 
 .card:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .card i {
@@ -166,9 +167,9 @@ h5 {
     position: absolute;
     top: 15px;
     right: 15px;
-    width: 30px;
-    height: 30px;
-    background-color: #5eead4;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
     border-radius: 50%;
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -181,10 +182,8 @@ h5 {
 }
 
 .click-indicator:after {
-    content: "👀";
     position: absolute;
     color: white;
-    font-size: 14px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
